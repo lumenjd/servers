@@ -39,4 +39,4 @@ sleep 1
 echo "Done booting!"
 echo "=========================================="
 
-
+sleep infinity
