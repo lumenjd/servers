@@ -1,0 +1,135 @@
+     README for Windows and UNIX
+     Microsoft SQL Server 2000 Driver for JDBC
+     Service Pack 3
+     Version 2.2.0040
+     May 2004
+
+
+This README file contains additional database driver information not 
+included in the SQL SERVER 2000 DRIVER FOR JDBC USER'S GUIDE AND 
+REFERENCE or the online help.
+
+
+CONTENTS
+
+Notes, Known Problems, and Restrictions
+Installed Files
+    
+
+     Notes, Known Problems, and Restrictions
+
+The following are notes, known problems, or restrictions with 
+version 2.2 of the SQL Server 2000 driver for JDBC:
+
+After performing an uninstall of the SQL Server 2000 Driver for JDBC, a 
+file named "log.txt" remains in the installation directory.  You can 
+delete both the log.txt file and the installation directory.
+
+The SQL Server 2000 driver returns stored procedure names with the 
+version number appended to it. For example, a procedure defined as 
+"proc1" will be returned as "proc1;1".
+
+Due to the way CHAR, VARCHAR, and LONGVARCHAR data types are handled 
+internally by the driver, parameters of these types exceeding 4000 
+characters in length cannot be compared or sorted, except when using 
+the IS NULL or LIKE operator.
+
+To perform an update on a ResultSet, the ResultSet must include a 
+searchable column, as indicated by ResultSetMetaData.isSearchable().  
+Long columns, such as text, are not searchable; therefore, when 
+creating an updateable ResultSet for the purpose of updating long data, 
+you must also include another searchable column in your query.
+
+For optimal performance, the SQL Server driver requires columns to be 
+fetched in left-to-right order.
+
+There is a known issue in the JVM regarding the conversion of the Euro 
+character in Microsoft Codepage 936. The value returned from the JVM is 
+an empty string instead of 20AC. This issue has been reported to Sun 
+Microsystems.
+
+If you want to use JDBC distributed transactions through JTA, you must 
+install JDBC XA Procedures. See "SQL Server 2000 Driver for JDBC," in 
+the SQL SERVER 2000 DRIVER FOR JDBC USER'S GUIDE AND REFERENCE for 
+details.
+
+If you want to use JDBC distributed transactions in a 64-bit environment,
+you must install the 64-bit JDBC XA Procedures. See "SQL Server 2000 Driver 
+for JDBC," in the SQL SERVER 2000 DRIVER FOR JDBC USER'S GUIDE AND REFERENCE
+for details. NOTE: The 64-bit script is located in the directory
+"SQLServer JTA 64-bit". 
+
+If you are using JTA for distributed transactions, you may encounter 
+problems when performing certain operations, as shown in the following 
+example:
+
+  xaResource.start(xid1, TMNOFLAGS)
+  xaResource.recover(TMSTARTRSCAN) ---> returns xid1 transaction
+
+Recover should not return xid1 because it is not prepared yet.
+
+XAConnection.recover() requires SQL Server sysadmin privileges for the 
+current user. If users without sysadmin privileges will be initiating 
+recovery on distributed transactions, you must explicitly grant them 
+access to the xp_jdbc_recover stored procedure.
+
+Named Instance:  If the default instance is NOT listening on port 1433, 
+and you want to connect to the server using the instance name (instead 
+of servername:port_number), then you must specify the server name and 
+instance name in the form "server_name\\mssqlserver" in the connection 
+URL or the JDBC data source ServerName attribute.  For example, to 
+connect to the default instance on SERVER1, you would use 
+"server1\\mssqlserver" in the URL or data source.
+
+
+     Installed Files 
+
+In the following list of files, the product installation directory (as 
+determined by the user) is represented by INSTALL_DIR.
+
+Setup copies the following directory and file to INSTALL_DIR:
+
+read.me                     Readme file
+/_uninst                    Files to uninstall SQL Server 2000 driver 
+                            for JDBC [Windows installations only]
+
+Setup copies the following files and directories to INSTALL_DIR/books:
+
+books.pdf                   Library file for SQL Server 2000 driver for 
+                            JDBC documentation
+INDEX.PDX                   Index file for Acrobat full-text search
+/INDEX                      Directory containing additional Acrobat 
+                            index files
+/msjdbcig/msjdbcig.pdf      SQL Server 2000 Driver for JDBC 
+                            Installation Guide
+/msjdbcref/msjdbcref.pdf    SQL Server 2000 Driver for JDBC User's 
+                            Guide and Reference
+
+Setup copies the following files and directories to INSTALL_DIR/Help:
+
+*.css
+*.html
+/images
+/wwhdata
+/wwhelp
+
+Setup copies the following files and directories to INSTALL_DIR/lib:
+
+mssqlserver.jar           Microsoft SQL Server 2000 driver for JDBC and 
+                          DataSource classes
+msbase.jar                Classes used by the SQL Server driver
+msutil.jar                Classes used by the SQL Server driver
+
+Installation copies the following files to INSTALL_DIR/SQLServer JTA:
+
+instjdbc.sql              File for installing JTA Stored Procedures
+sqljdbc.dll               File for use with JTA Stored Procedures
+
+Installation copies the following files to INSTALL_DIR/SQLServer JTA 64-bit:
+
+instjdbc.sql              File for installing JTA Stored Procedures
+sqljdbc.dll               File for use with JTA Stored Procedures
+
+
+--------------
+End of File

@@ -1,0 +1,200 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:59:29" />
+    <title>Connection String Properties</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="914985" class="NewHTMLPage">
+  <a name="914985"> </a>Connection String Properties
+</h2><hr />
+<p id="917392" class="Body">
+  <a name="917392"> </a>You can use the following connection properties with the JDBC driver manager or SQL Server 2000 Driver for JDBC data sources.
+</p>
+<p id="916835" class="Body">
+  <a name="916835"> </a><a href="jdbcsqlsrv3.html#922428">Table 3-1</a> lists the JDBC connection properties supported by the SQL Server driver, and describes each property. The properties have the form:
+</p>
+<pre  class="Preformatted">
+<em>property=value</em><a name="917472"> </a>
+</pre>
+<p id="917544" class="Body">
+  <a name="917544"> </a>NOTE: All connection string property names are case-insensitive. For example, PortNumber is the same as portnumber.
+</p>
+<p id="920595" class="Body">
+  <a name="920595"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption><a name="922428"> </a><div id="922428" class="TableTitle">Table 3-1.  SQL Server Connection String Properties </div></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><a name="922432"> </a><div id="922432" class="CellHeading">Property</div></th>
+    <th><a name="922434"> </a><div id="922434" class="CellHeading">Description</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922436"> </a><div id="922436" class="CellBody">DatabaseName</div><a name="922437"> </a><div id="922437" class="CellBody">OPTIONAL</div></td>
+    <td bgcolor="#E6E6E6"><a name="922439"> </a><div id="922439" class="CellBody">The name of the SQL Server database to which you want to connect.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922441"> </a><div id="922441" class="CellBody">HostProcess</div><a name="922442"> </a><div id="922442" class="CellBody">OPTIONAL</div></td>
+    <td bgcolor="#E6E6E6"><a name="922444"> </a><div id="922444" class="CellBody">The process ID of the application connecting to SQL Server 2000. The supplied value appears in the &quot;hostprocess&quot; column of the sysprocesses table.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922446"> </a><div id="922446" class="CellBody">NetAddress</div><a name="922447"> </a><div id="922447" class="CellBody">OPTIONAL</div></td>
+    <td bgcolor="#E6E6E6"><a name="922449"> </a><div id="922449" class="CellBody">The MAC address of the network interface card of the application connecting to SQL Server 2000. The supplied value appears in the &quot;net_address&quot; column of the sysprocesses table.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922451"> </a><div id="922451" class="CellBody">Password</div></td>
+    <td bgcolor="#E6E6E6"><a name="922453"> </a><div id="922453" class="CellBody">The case-insensitive password used to connect to your SQL Server database.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922455"> </a><div id="922455" class="CellBody">PortNumber</div><a name="922456"> </a><div id="922456" class="CellBody">OPTIONAL</div></td>
+    <td bgcolor="#E6E6E6"><a name="922458"> </a><div id="922458" class="CellBody">The TCP port (use for DataSource connections only). The default is 1433.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922460"> </a><div id="922460" class="CellBody">ProgramName</div><a name="922461"> </a><div id="922461" class="CellBody">OPTIONAL</div></td>
+    <td bgcolor="#E6E6E6"><a name="922463"> </a><div id="922463" class="CellBody">The name of the application connecting to SQL Server 2000. The supplied value appears in the &quot;program_name&quot; column of the sysprocesses table.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922466"> </a><div id="922466" class="CellBody">SelectMethod</div></td>
+    <td bgcolor="#E6E6E6"><a name="922468"> </a><div id="922468" class="CellBody">SelectMethod={cursor | direct}. Determines whether database cursors are used for Select statements. Performance and behavior of the driver are affected by the SelectMethod setting. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922470"> </a><div id="922470" class="CellBody">SelectMethod <span style="color: #000000;  font-style: italic; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline">(cont.)</span></div></td>
+    <td bgcolor="#E6E6E6"><a name="922472"> </a><div id="922472" class="CellBody">Direct-The direct method sends the complete result set in one request to the driver. It is useful for queries that only produce a small amount of data that you fetch completely. You should avoid using direct when executing queries that produce a large amount of data, as the result set is cached completely on the client and constrains memory. In this mode, each statement requires its own connection to the database. This is accomplished by &quot;cloning&quot; connections. Cloned connections use the same connection properties as the original connection; however, because transactions must occur on a single connection, auto commit mode is required. Due to this, <em>JTA is not supported</em> in direct mode. In addition, some operations, such as updating an insensitive result set, are not supported in direct mode because the driver must create a second statement internally. Exceptions generated due to the creation of cloned statements usually return an error message similar to "Cannot start a cloned connection while in manual transaction mode."</div><a name="922473"> </a><div id="922473" class="CellBody">Cursor-When the SelectMethod is set to cursor, a server-side cursor is generated. The rows are fetched from the server in blocks. The JDBC Statement method setFetchSize can be used to control the number of rows that are fetched per request. The cursor method is useful for queries that produce a large amount of data, data that is too large to cache on the client. Performance tests show that the value of setFetchSize has a serious impact on performance when SelectMethod is set to cursor. There is no simple rule for determining the value that you should use. You should experiment with different setFetchSize values to find out which value gives the best performance for your application. </div><a name="922474"> </a><div id="922474" class="CellBody">The default is direct.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922476"> </a><div id="922476" class="CellBody">SendStringParameters<br />AsUnicode</div></td>
+    <td bgcolor="#E6E6E6"><a name="922478"> </a><div id="922478" class="CellBody">SendStringParametersAsUnicode={true | false}. Determines whether string parameters are sent to the SQL Server database in Unicode or in the default character encoding of the database. True means that string parameters are sent to SQL Server in Unicode. False means that they are sent in the default encoding, which can improve performance because the server does not need to convert Unicode characters to the default encoding. You should, however, use default encoding only if the parameter string data that you specify is consistent with the default encoding of the database.</div><a name="922479"> </a><div id="922479" class="CellBody">The default is true.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922481"> </a><div id="922481" class="CellBody">ServerName</div></td>
+    <td bgcolor="#E6E6E6"><a name="922483"> </a><div id="922483" class="CellBody">The IP address (use for DataSource connections only).</div><a name="922662"> </a><div id="922662" class="CellBody">To connect to a named instance, specify <em>server_name</em>\<em>instance_name</em> for this property, where <em>server_name</em> is the IP address and <em>instance_name</em> is the name of the instance to which you want to connect on the specified server.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922485"> </a><div id="922485" class="CellBody">User</div></td>
+    <td bgcolor="#E6E6E6"><a name="922487"> </a><div id="922487" class="CellBody">The case-insensitive user name used to connect to your SQL Server database.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="922489"> </a><div id="922489" class="CellBody">Wsid</div></td>
+    <td bgcolor="#E6E6E6"><a name="922491"> </a><div id="922491" class="CellBody">The workstation ID. Typically, this is the network name of the computer on which the application resides (optional). If specified, this value is stored in the master.dbo.sysprocesses column hostname and is returned by sp_who and the Transact-SQL HOST_NAME function.</div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsqlsrv2.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsqlsrv4.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

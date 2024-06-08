@@ -1,0 +1,9 @@
+killall -9 java
+killall -9 authd
+killall -9 gamedbd
+killall -9 gdeliveryd
+killall -9 gfactiond
+killall -9 gacd
+killall -9 glinkd
+killall -9 uniquenamed
+killall -9 gs

@@ -1,0 +1,754 @@
+filter 16
+filter 48
+filter 64
+filter 112
+filter 784688
+filter 784992
+filter 785200
+filter 785328
+filter 785600
+filter 785696
+filter 785808
+filter 786000
+filter 1102752
+filter 1308592
+filter 1309712
+filter 1310160
+filter 1311616
+filter 1312688
+filter 1312800
+filter 1314064
+filter 1314592
+filter 1315136
+filter 1315440
+filter 1317488
+filter 788592
+filter 790080
+filter 791824
+filter 792352
+filter 792512
+filter 793008
+filter 793584
+filter 796064
+filter 796192
+filter 796384
+filter 797456
+filter 797568
+filter 799728
+filter 799920
+filter 800096
+filter 800240
+filter 800400
+filter 800560
+filter 801232
+filter 801296
+filter 784128
+filter 784384
+filter 784544
+filter 784640
+filter 784848
+filter 784880
+filter 785072
+filter 785232
+filter 785344
+filter 785408
+filter 785504
+filter 785616
+filter 785728
+filter 785840
+filter 785936
+filter 786064
+filter 786096
+filter 786128
+filter 786160
+filter 786288
+filter 786304
+filter 786400
+filter 786416
+filter 786544
+filter 786592
+filter 786672
+filter 786688
+filter 786736
+filter 786752
+filter 786832
+filter 786848
+filter 786912
+filter 786992
+filter 787040
+filter 787056
+filter 787360
+filter 787792
+filter 787904
+filter 788032
+filter 788256
+filter 788560
+filter 788864
+filter 789184
+filter 789392
+filter 789664
+filter 789712
+filter 789840
+filter 790064
+filter 790352
+filter 790544
+filter 790720
+filter 788544
+filter 789152
+filter 789632
+filter 789744
+filter 790016
+filter 790384
+filter 790560
+filter 790688
+filter 791472
+filter 791616
+filter 791872
+filter 791984
+filter 793024
+filter 793152
+filter 793984
+filter 794128
+filter 794208
+filter 794304
+filter 794592
+filter 154281537
+filter 154281569
+filter 154279937
+filter 179255008
+filter 179257728
+filter 186621632
+filter 250460736
+filter 250461488
+filter 250462112
+filter 745408016
+filter 745408928
+filter 745409472
+filter 745429536
+filter 953488
+filter 953600
+filter 953744
+filter 953808
+filter 953952
+filter 953984
+filter 954176
+filter 954304
+filter 956880
+filter 984624
+filter 984800
+filter 985472
+filter 986688
+filter 986896
+filter 988192
+filter 988288
+filter 988512
+filter 988656
+filter 989872
+filter 990016
+filter 990160
+filter 990272
+filter 990464
+filter 990608
+filter 991344
+filter 991856
+filter 992000
+filter 992128
+filter 992208
+filter 979712
+filter 979968
+filter 980128
+filter 980240
+filter 980352
+filter 980448
+filter 980608
+filter 980768
+filter 981008
+filter 981120
+filter 981216
+filter 981456
+filter 981600
+filter 981808
+filter 981968
+filter 982096
+filter 982160
+filter 982256
+filter 982368
+filter 982480
+filter 982640
+filter 982768
+filter 982864
+filter 983008
+filter 983232
+filter 983472
+filter 983616
+filter 983776
+filter 984080
+filter 984256
+filter 992448
+filter 992576
+filter 992720
+filter 992944
+filter 993040
+filter 993200
+filter 993328
+filter 993472
+filter 993600
+filter 993680
+info : send toptable 1, success
+info : send toptable 2, success
+info : send toptable 3, success
+info : toplist send toptable 1 ret 0
+info : toplist send toptable 2 ret 0
+info : toplist send toptable 3 ret 0
+info : send toptable 10, success
+info : send toptable 11, success
+info : send toptable 12, success
+info : toplist send toptable 10 ret 0
+info : toplist send toptable 11 ret 0
+info : toplist send toptable 12 ret 0
+info : send toptable 13, success
+info : send toptable 14, success
+info : send toptable 15, success
+info : toplist send toptable 13 ret 0
+info : toplist send toptable 14 ret 0
+info : toplist send toptable 15 ret 0
+info : send toptable 16, success
+info : send toptable 17, success
+info : send toptable 18, success
+info : toplist send toptable 18 ret 0
+info : toplist send toptable 16 ret 0
+info : toplist send toptable 17 ret 0
+info : send toptable 19, success
+info : send toptable 20, success
+info : send toptable 21, success
+info : toplist send toptable 19 ret 0
+info : toplist send toptable 20 ret 0
+info : toplist send toptable 21 ret 0
+info : send toptable 22, success
+info : send toptable 23, success
+info : send toptable 24, success
+info : toplist send toptable 22 ret 0
+info : toplist send toptable 23 ret 0
+info : toplist send toptable 24 ret 0
+info : send toptable 25, success
+info : send toptable 26, success
+info : send toptable 27, success
+info : toplist send toptable 25 ret 0
+info : toplist send toptable 26 ret 0
+info : toplist send toptable 27 ret 0
+info : send toptable 28, success
+info : send toptable 31, success
+info : send toptable 32, success
+info : toplist send toptable 28 ret 0
+info : toplist send toptable 31 ret 0
+info : toplist send toptable 32 ret 0
+info : send toptable 33, success
+info : send toptable 34, success
+info : send toptable 35, success
+info : toplist send toptable 33 ret 0
+info : toplist send toptable 34 ret 0
+info : toplist send toptable 35 ret 0
+info : send toptable 40, success
+info : send toptable 41, success
+info : send toptable 42, success
+info : toplist send toptable 40 ret 0
+info : toplist send toptable 41 ret 0
+info : toplist send toptable 42 ret 0
+info : send toptable 43, success
+info : send toptable 44, success
+info : send toptable 45, success
+info : toplist send toptable 43 ret 0
+info : toplist send toptable 44 ret 0
+info : toplist send toptable 45 ret 0
+info : send toptable 46, success
+info : send toptable 47, success
+info : send toptable 48, success
+info : toplist send toptable 46 ret 0
+info : toplist send toptable 47 ret 0
+info : toplist send toptable 48 ret 0
+info : send toptable 49, success
+info : send toptable 50, success
+info : send toptable 51, success
+info : toplist send toptable 49 ret 0
+info : toplist send toptable 50 ret 0
+info : toplist send toptable 51 ret 0
+info : send toptable 52, success
+info : send toptable 53, success
+info : send toptable 54, success
+info : toplist send toptable 52 ret 0
+info : toplist send toptable 53 ret 0
+info : toplist send toptable 54 ret 0
+info : send toptable 55, success
+info : send toptable 56, success
+info : send toptable 57, success
+info : toplist send toptable 55 ret 0
+info : toplist send toptable 56 ret 0
+info : toplist send toptable 57 ret 0
+info : send toptable 58, success
+info : send toptable 60, success
+info : send toptable 61, success
+info : toplist send toptable 58 ret 0
+info : toplist send toptable 60 ret 0
+info : toplist send toptable 61 ret 0
+info : send toptable 62, success
+info : send toptable 63, success
+info : send toptable 64, success
+info : toplist send toptable 62 ret 0
+info : toplist send toptable 63 ret 0
+info : toplist send toptable 64 ret 0
+info : send toptable 65, success
+info : send toptable 66, success
+info : send toptable 67, success
+info : toplist send toptable 65 ret 0
+info : toplist send toptable 66 ret 0
+info : toplist send toptable 67 ret 0
+info : send toptable 68, success
+info : send toptable 80, success
+info : send toptable 81, success
+info : toplist send toptable 68 ret 0
+info : toplist send toptable 80 ret 0
+info : toplist send toptable 81 ret 0
+info : send toptable 82, success
+info : send toptable 83, success
+info : send toptable 90, success
+info : toplist send toptable 82 ret 0
+info : toplist send toptable 83 ret 0
+info : toplist send toptable 90 ret 0
+info : send toptable 91, success
+info : send toptable 92, success
+info : send toptable 93, success
+info : toplist send toptable 92 ret 0
+info : toplist send toptable 93 ret 0
+info : toplist send toptable 91 ret 0
+info : toplist quit
+TravelTable user, pstorage = 0x082e8ed0
+TravelTable status, pstorage = 0x082e9260
+TravelTable family, pstorage = 0x081f26f8
+TravelTable inventory, pstorage = 0x08301548
+TravelTable storehouse, pstorage = 0x082e8d98
+TravelTable faction, pstorage = 0x08301410
+TravelTable top, pstorage = 0x082e8e38
+TravelTable snsplayerinfo, pstorage = 0x082a06f8
+TravelTable base2, pstorage = 0x082a08d0
+gamedbclient onaddsession
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+filter 16
+filter 48
+filter 64
+filter 112
+filter 784688
+filter 784992
+filter 785200
+filter 785328
+filter 785600
+filter 785696
+filter 785808
+filter 786000
+filter 1102752
+filter 1308592
+filter 1309712
+filter 1310160
+filter 1311616
+filter 1312688
+filter 1312800
+filter 1314064
+filter 1314592
+filter 1315136
+filter 1315440
+filter 1317488
+filter 788592
+filter 790080
+filter 791824
+filter 792352
+filter 792512
+filter 793008
+filter 793584
+filter 796064
+filter 796192
+filter 796384
+filter 797456
+filter 797568
+filter 799728
+filter 799920
+filter 800096
+filter 800240
+filter 800400
+filter 800560
+filter 801232
+filter 801296
+filter 784128
+filter 784384
+filter 784544
+filter 784640
+filter 784848
+filter 784880
+filter 785072
+filter 785232
+filter 785344
+filter 785408
+filter 785504
+filter 785616
+filter 785728
+filter 785840
+filter 785936
+filter 786064
+filter 786096
+filter 786128
+filter 786160
+filter 786288
+filter 786304
+filter 786400
+filter 786416
+filter 786544
+filter 786592
+filter 786672
+filter 786688
+filter 786736
+filter 786752
+filter 786832
+filter 786848
+filter 786912
+filter 786992
+filter 787040
+filter 787056
+filter 787360
+filter 787792
+filter 787904
+filter 788032
+filter 788256
+filter 788560
+filter 788864
+filter 789184
+filter 789392
+filter 789664
+filter 789712
+filter 789840
+filter 790064
+filter 790352
+filter 790544
+filter 790720
+filter 788544
+filter 789152
+filter 789632
+filter 789744
+filter 790016
+filter 790384
+filter 790560
+filter 790688
+filter 791472
+filter 791616
+filter 791872
+filter 791984
+filter 793024
+filter 793152
+filter 793984
+filter 794128
+filter 794208
+filter 794304
+filter 794592
+filter 154281537
+filter 154281569
+filter 154279937
+filter 179255008
+filter 179257728
+filter 186621632
+filter 250460736
+filter 250461488
+filter 250462112
+filter 745408016
+filter 745408928
+filter 745409472
+filter 745429536
+filter 953488
+filter 953600
+filter 953744
+filter 953808
+filter 953952
+filter 953984
+filter 954176
+filter 954304
+filter 956880
+filter 984624
+filter 984800
+filter 985472
+filter 986688
+filter 986896
+filter 988192
+filter 988288
+filter 988512
+filter 988656
+filter 989872
+filter 990016
+filter 990160
+filter 990272
+filter 990464
+filter 990608
+filter 991344
+filter 991856
+filter 992000
+filter 992128
+filter 992208
+filter 979712
+filter 979968
+filter 980128
+filter 980240
+filter 980352
+filter 980448
+filter 980608
+filter 980768
+filter 981008
+filter 981120
+filter 981216
+filter 981456
+filter 981600
+filter 981808
+filter 981968
+filter 982096
+filter 982160
+filter 982256
+filter 982368
+filter 982480
+filter 982640
+filter 982768
+filter 982864
+filter 983008
+filter 983232
+filter 983472
+filter 983616
+filter 983776
+filter 984080
+filter 984256
+filter 992448
+filter 992576
+filter 992720
+filter 992944
+filter 993040
+filter 993200
+filter 993328
+filter 993472
+filter 993600
+filter 993680
+info : send toptable 1, success
+info : send toptable 2, success
+info : send toptable 3, success
+info : toplist send toptable 1 ret 0
+info : toplist send toptable 2 ret 0
+info : toplist send toptable 3 ret 0
+info : send toptable 10, success
+info : send toptable 11, success
+info : send toptable 12, success
+info : toplist send toptable 10 ret 0
+info : toplist send toptable 11 ret 0
+info : toplist send toptable 12 ret 0
+info : send toptable 13, success
+info : send toptable 14, success
+info : send toptable 15, success
+info : toplist send toptable 13 ret 0
+info : toplist send toptable 14 ret 0
+info : toplist send toptable 15 ret 0
+info : send toptable 16, success
+info : send toptable 17, success
+info : send toptable 18, success
+info : toplist send toptable 16 ret 0
+info : toplist send toptable 17 ret 0
+info : toplist send toptable 18 ret 0
+info : send toptable 19, success
+info : send toptable 20, success
+info : send toptable 21, success
+info : toplist send toptable 19 ret 0
+info : toplist send toptable 20 ret 0
+info : toplist send toptable 21 ret 0
+info : send toptable 22, success
+info : send toptable 23, success
+info : send toptable 24, success
+info : toplist send toptable 22 ret 0
+info : toplist send toptable 23 ret 0
+info : toplist send toptable 24 ret 0
+info : send toptable 25, success
+info : send toptable 26, success
+info : send toptable 27, success
+info : toplist send toptable 25 ret 0
+info : toplist send toptable 26 ret 0
+info : toplist send toptable 27 ret 0
+info : send toptable 28, success
+info : send toptable 31, success
+info : send toptable 32, success
+info : toplist send toptable 28 ret 0
+info : toplist send toptable 32 ret 0
+info : toplist send toptable 31 ret 0
+info : send toptable 33, success
+info : send toptable 34, success
+info : send toptable 35, success
+info : toplist send toptable 34 ret 0
+info : toplist send toptable 35 ret 0
+info : toplist send toptable 33 ret 0
+info : send toptable 40, success
+info : send toptable 41, success
+info : send toptable 42, success
+info : toplist send toptable 40 ret 0
+info : toplist send toptable 41 ret 0
+info : toplist send toptable 42 ret 0
+info : send toptable 43, success
+info : send toptable 44, success
+info : send toptable 45, success
+info : toplist send toptable 43 ret 0
+info : toplist send toptable 44 ret 0
+info : toplist send toptable 45 ret 0
+info : send toptable 46, success
+info : send toptable 47, success
+info : send toptable 48, success
+info : toplist send toptable 46 ret 0
+info : toplist send toptable 47 ret 0
+info : toplist send toptable 48 ret 0
+info : send toptable 49, success
+info : send toptable 50, success
+info : send toptable 51, success
+info : toplist send toptable 49 ret 0
+info : toplist send toptable 50 ret 0
+info : toplist send toptable 51 ret 0
+info : send toptable 52, success
+info : send toptable 53, success
+info : send toptable 54, success
+info : toplist send toptable 52 ret 0
+info : toplist send toptable 53 ret 0
+info : toplist send toptable 54 ret 0
+info : send toptable 55, success
+info : send toptable 56, success
+info : send toptable 57, success
+info : toplist send toptable 55 ret 0
+info : toplist send toptable 56 ret 0
+info : toplist send toptable 57 ret 0
+info : send toptable 58, success
+info : send toptable 60, success
+info : send toptable 61, success
+info : toplist send toptable 58 ret 0
+info : toplist send toptable 60 ret 0
+info : toplist send toptable 61 ret 0
+info : send toptable 62, success
+info : send toptable 63, success
+info : send toptable 64, success
+info : toplist send toptable 62 ret 0
+info : toplist send toptable 63 ret 0
+info : toplist send toptable 64 ret 0
+info : send toptable 65, success
+info : send toptable 66, success
+info : send toptable 67, success
+info : toplist send toptable 65 ret 0
+info : toplist send toptable 66 ret 0
+info : toplist send toptable 67 ret 0
+info : send toptable 68, success
+info : send toptable 80, success
+info : send toptable 81, success
+info : toplist send toptable 80 ret 0
+info : toplist send toptable 81 ret 0
+info : toplist send toptable 68 ret 0
+info : send toptable 82, success
+info : send toptable 83, success
+info : send toptable 90, success
+info : toplist send toptable 82 ret 0
+info : toplist send toptable 83 ret 0
+info : toplist send toptable 90 ret 0
+info : send toptable 91, success
+info : send toptable 92, success
+info : send toptable 93, success
+info : toplist send toptable 91 ret 0
+info : toplist send toptable 92 ret 0
+info : toplist send toptable 93 ret 0
+info : toplist quit
+TravelTable user, pstorage = 0x082e8ed0
+TravelTable status, pstorage = 0x082e9260
+TravelTable family, pstorage = 0x081f26f8
+TravelTable inventory, pstorage = 0x08301548
+TravelTable storehouse, pstorage = 0x082e8d98
+TravelTable faction, pstorage = 0x08301410
+TravelTable top, pstorage = 0x082e8e38
+TravelTable snsplayerinfo, pstorage = 0x082a06f8
+TravelTable base2, pstorage = 0x082a08d0
+gamedbclient onaddsession
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver
+sendtask run
+NewToptable writetodbserver

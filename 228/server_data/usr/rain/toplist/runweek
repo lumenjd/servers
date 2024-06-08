@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /usr/rain/toplist
+rm -rf dbhomewdb
+cp -a /usr/rain/gamedbd/dbhomewdb .
+./toplist toplist.conf ./dbhomewdb weekly &

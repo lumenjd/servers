@@ -1,0 +1,170 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:34" />
+    <title>C Designing JDBC Applications for Performance Optimization</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="68625" class="NewHTMLPageApp2">
+  <a name="68625"> </a>Designing JDBC Applications for Performance Optimization
+</h2><hr />
+<p id="72246" class="Body">
+  <a name="72246"> </a>Developing performance-oriented JDBC applications is not easy. JDBC drivers do not throw exceptions to say that your code is running too slow.
+</p>
+<p id="74093" class="Body">
+  <a name="74093"> </a>These guidelines were compiled by examining the JDBC implementations of numerous shipping JDBC applications. The guidelines discuss using database metadata materials, retrieving data, selecting JDBC objects and methods, designing JDBC applications, and updating data. 
+</p>
+<p id="72238" class="Body">
+  <a name="72238"> </a>The following table summarizes some common JDBC system performance problems and suggests some possible solutions.
+</p>
+<p id="74200" class="Body">
+  <a name="74200"> </a>
+
+<table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="74151"> </a><div id="74151" class="CellHeading">Problem</div></td>
+    <td bgcolor="#FFFFEE"><a name="74153"> </a><div id="74153" class="CellHeading">Solution</div></td>
+    <td bgcolor="#FFFFEE"><a name="74155"> </a><div id="74155" class="CellHeading">See guidelines in...</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="74157"> </a><div id="74157" class="CellBody">Network communication is slow</div></td>
+    <td bgcolor="#FFFFEE"><a name="74159"> </a><div id="74159" class="CellBody">Reduce network traffic </div></td>
+    <td bgcolor="#FFFFEE"><a name="74163"> </a><div id="74163" class="CellBody"><a href="jdbcdesign2.html#72256">&quot;Using Database Metadata Methods&quot;</a></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="74166"> </a><div id="74166" class="CellBody">Evaluation of complex SQL queries on the database server is slow and might reduce concurrency</div></td>
+    <td bgcolor="#FFFFEE"><a name="74168"> </a><div id="74168" class="CellBody">Simplify queries </div></td>
+    <td bgcolor="#FFFFEE"><a name="74172"> </a><div id="74172" class="CellBody"><a href="jdbcdesign2.html#72256">&quot;Using Database Metadata Methods&quot;</a></div><a name="74176"> </a><div id="74176" class="CellBody"><a href="jdbcdesign5.html#72444">&quot;Selecting JDBC Objects and Methods&quot;</a></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="74179"> </a><div id="74179" class="CellBody">Excessive calls from the application to the driver decrease performance</div></td>
+    <td bgcolor="#FFFFEE"><a name="74181"> </a><div id="74181" class="CellBody">Optimize application-to-driver interaction</div></td>
+    <td bgcolor="#FFFFEE"><a name="74185"> </a><div id="74185" class="CellBody"><a href="jdbcdesign3.html#72549">&quot;Retrieving Data&quot;</a></div><a name="74189"> </a><div id="74189" class="CellBody"><a href="jdbcdesign5.html#72444">&quot;Selecting JDBC Objects and Methods&quot;</a></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="74192"> </a><div id="74192" class="CellBody">Disk input/output is slow</div></td>
+    <td bgcolor="#FFFFEE"><a name="74194"> </a><div id="74194" class="CellBody">Limit disk input/output </div></td>
+    <td bgcolor="#FFFFEE"><a name="74198"> </a><div id="74198" class="CellBody"><a href="jdbcdesign6.html#72586">&quot;Designing JDBC Applications&quot;</a></div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="getinfoapp.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcdesign2.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

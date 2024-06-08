@@ -1,0 +1,182 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:34" />
+    <title>Selecting JDBC Objects and Methods </title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="72444" class="NewHTMLPage">
+  <a name="72444"> </a>Selecting JDBC Objects and Methods 
+</h2><hr />
+<p id="72445" class="Body">
+  <a name="72445"> </a>The guidelines in this section will help you to optimize system performance when selecting and using JDBC objects and methods.
+</p>
+<h3 id="72446" class="Heading2">
+  <a name="72446"> </a>Using Parameter Markers as Arguments to Stored Procedures
+</h3>
+<p id="72447" class="Body">
+  <a name="72447"> </a>When calling stored procedures, always use parameter markers for the argument markers instead of using literal arguments. JDBC drivers can call stored procedures on the database server either by executing the procedure as any other SQL query, or by optimizing the execution by invoking a Remote Procedure Call (RPC) directly into the database server. Executing the stored procedure as a SQL query results in the database server parsing the statement, validating the argument types, and converting the arguments into the correct data types. Remember that SQL is always sent to the database server as a character string, for example, "{call getCustName (12345)}". In this case, even though the application programmer might assume that the only argument to getCustName is an integer, the argument is actually passed inside a character string to the server. The database server would parse the SQL query, isolate the single argument value 12345, then convert the string '12345' into an integer value. 
+</p>
+<p id="73340" class="Body">
+  <a name="73340"> </a>By invoking an RPC inside the database server, the overhead of using a SQL character string is avoided. Instead, the procedure is called only by name with the argument values already encoded into their native data types.
+</p>
+<h4 id="73341" class="Heading3">
+  <a name="73341"> </a>Case 1 
+</h4>
+<p id="73495" class="Body">
+  <a name="73495"> </a>Stored Procedure cannot be optimized to use a server-side RPC. The database server must parse the statement, validate the argument types, and convert the arguments into the correct data types.
+</p>
+<pre  class="Preformatted">
+CallableStatement cstmt = conn.prepareCall ("call getCustName (12345)");<a name="72451"> </a>
+ResultSet rs = cstmt.executeQuery ();<a name="72452"> </a>
+</pre>
+<h4 id="72453" class="Heading3">
+  <a name="72453"> </a>Case 2
+</h4>
+<p id="72454" class="Body">
+  <a name="72454"> </a>Stored Procedure can be optimized to use a server-side RPC. Because the application calls the procedure by name and the argument values are already encoded, the load on the database server is less.
+</p>
+<pre  class="Preformatted">
+CallableStatement cstmt = conn.prepareCall ("Call getCustName (?)");<a name="72577"> </a>
+cstmt.setLong (1,12345);<a name="72578"> </a>
+ResultSet rs = cstmt.executeQuery();<a name="72457"> </a>
+</pre>
+<h3 id="72458" class="Heading2">
+  <a name="72458"> </a>Using the Statement Object Instead of the PreparedStatement Object
+</h3>
+<p id="72459" class="Body">
+  <a name="72459"> </a>JDBC drivers are optimized based on the perceived use of the functions that are being executed. Choose between the PreparedStatement object and the Statement object depending on the planned use. The Statement object is optimized for a single execution of a SQL statement. In contrast, the PreparedStatement object is optimized for SQL statements that will be executed two or more times.
+</p>
+<p id="72460" class="Body">
+  <a name="72460"> </a>The overhead for the initial execution of a PreparedStatement object is high. The advantage comes with subsequent executions of the SQL statement. 
+</p>
+<h3 id="72461" class="Heading2">
+  <a name="72461"> </a>Choosing the Right Cursor
+</h3>
+<p id="72462" class="Body">
+  <a name="72462"> </a>Choosing the appropriate type of cursor allows maximum application flexibility. This section summarizes the performance issues of three types of cursors.
+</p>
+<p id="72463" class="Body">
+  <a name="72463"> </a>A forward-only cursor provides excellent performance for sequential reads of all of the rows in a table. However, it cannot be used when the rows to be returned are not sequential.
+</p>
+<p id="72464" class="Body">
+  <a name="72464"> </a>Insensitive cursors used by JDBC drivers are ideal for applications that require high levels of concurrency on the database server and require the ability to scroll forwards and backwards through result sets. The first request to an insensitive cursor fetches all of the rows and stores them on the client. Thus, the first request is very slow, especially when long data is retrieved. Subsequent requests do not require any network traffic and are processed quickly. Because the first request is processed slowly, insensitive cursors should not be used for a single request of one row. Designers should also avoid using insensitive cursors when long data is returned, because memory can be exhausted. Some insensitive cursor implementations cache the data in a temporary table on the database server and avoid the performance issue.
+</p>
+<p id="72465" class="Body">
+  <a name="72465"> </a>Sensitive cursors, sometimes called keyset-driven cursors, use identifiers, such as a ROWID, that already exist in your database. When you scroll through the result set, the data for the identifiers is retrieved. Because each request generates network traffic, performance can be very slow. However, returning nonsequential rows does not further affect performance. Sensitive cursors are the preferred scrollable cursor model for dynamic situations, when the application cannot afford to buffer the data from an insensitive cursor. 
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcdesign4.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcdesign6.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

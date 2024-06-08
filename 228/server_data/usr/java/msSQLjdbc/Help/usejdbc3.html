@@ -1,0 +1,174 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:48" />
+    <title>Connecting Through the JDBC Driver Manager</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="548419" class="NewHTMLPage">
+  <a name="548419"> </a>Connecting Through the JDBC Driver Manager
+</h2><hr />
+<p id="999139" class="Body">
+  <a name="999139"> </a>One way of connecting to a database is through the JDBC driver manager using the method DriverManager.getConnection. This method uses a string containing a URL. The following is an example of using the JDBC driver manager to connect to Microsoft SQL Server 2000 while passing the user name and password:
+</p>
+<pre  class="Preformatted">
+Class.forName(&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;);<a name="548437"> </a>
+Connection conn = DriverManager.getConnection<a name="548450"> </a>
+  (&quot;jdbc:microsoft:sqlserver://server1:1433;User=test;Password=secret&quot;);<a name="548481"> </a>
+</pre>
+<h3 id="549040" class="Heading2">
+  <a name="549040"> </a>URL Examples
+</h3>
+<p id="999143" class="Body">
+  <a name="999143"> </a>The complete connection URL format used with the driver manager is:
+</p>
+<pre  class="Preformatted">
+jdbc:microsoft:sqlserver://<code><em>hostname</em></code>:<em>port</em>[;<em>property</em>=<em>value</em>...] <a name="549042"> </a>
+</pre>
+<p id="549043" class="Body">
+  <a name="549043"> </a>where:
+</p>
+<p id="549070" class="Body">
+  <a name="549070"> </a>
+
+<table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="549052"> </a><div id="549052" class="CellBody"><span style="color: #000000;  font-style: italic; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline">hostname</span></div></td>
+    <td bgcolor="#FFFFEE" colspan="2" rowspan="1"><a name="549054"> </a><div id="549054" class="CellBody">is the TCP/IP address or TCP/IP host name of the server to which you are connecting.</div><a name="549055"> </a><div id="549055" class="CellBody">NOTE: Untrusted applets cannot open a socket to a machine other than the originating host. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="549059"> </a><div id="549059" class="CellBody"><em>port</em></div></td>
+    <td bgcolor="#FFFFEE" colspan="2" rowspan="1"><a name="549061"> </a><div id="549061" class="CellBody">is the number of the TCP/IP port. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="549065"> </a><div id="549065" class="CellBody"><em>property=value</em></div></td>
+    <td bgcolor="#FFFFEE" colspan="2" rowspan="1"><a name="549067"> </a><div id="549067" class="CellBody">specifies connection properties. See <a href="jdbcsqlsrv3.html#914985">&quot;Connection String Properties&quot;</a> for a list of connection properties and their values.</div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p id="550054" class="Body">
+  <a name="550054"> </a>The following example shows a typical connection URL:
+</p>
+<pre  class="Preformatted">
+jdbc:microsoft:sqlserver://server1:1433;user=test;password=secret<a name="549076"> </a>
+</pre>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="usejdbc2.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="usejdbc4.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

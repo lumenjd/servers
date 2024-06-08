@@ -1,0 +1,231 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:48" />
+    <title>Connecting Through Data Sources</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="539865" class="NewHTMLPage">
+  <a name="539865"> </a>Connecting Through Data Sources
+</h2><hr />
+<p id="539866" class="Body">
+  <a name="539866"> </a>A SQL Server 2000 Driver for JDBC data source is a DataSource object that provides the connection information needed to connect to an underlying database. The main advantage of using a data source is that it works with the Java Naming Directory Interface (JNDI) naming service, and it is created and managed outside of the applications that use it. Because the connection information is outside of applications, the time it takes to reconfigure your infrastructure when a change is made is minimal. For example, if the underlying database is moved to another server and uses another port number, the administrator must change only the relevant properties of the SQL Server 2000 Driver for JDBC data source (a DataSource object). The applications using the underlying database do not need to change because they only refer to the logical name of the SQL Server 2000 Driver for JDBC data source. 
+</p>
+<h3 id="539867" class="Heading2">
+  <a name="539867"> </a>How SQL Server 2000 Driver for JDBC Data Sources Are Implemented
+</h3>
+<p id="997503" class="Body">
+  <a name="997503"> </a>Microsoft ships a data source class for the SQL Server 2000 Driver for JDBC. See <a href="jdbcsqlsrv.html#920145">&quot;SQL Server 2000 Driver for JDBC&quot;</a> for the name of the class.
+</p>
+<p id="997504" class="Body">
+  <a name="997504"> </a>The SQL Server 2000 Driver for JDBC data source class provided implements the following interfaces defined in the JDBC 2.0 Optional Package:
+</p>
+<ul type="square">
+  <li class="SmartList1"><a name="539870"> </a>javax.sql.DataSource</li>
+  <li class="SmartList1"><a name="539871"> </a>javax.sql.ConnectionPoolDataSource, which enables you to implement connection pooling</li>
+</ul>
+<p id="539879" class="Body">
+  <a name="539879"> </a>NOTE: You must include the javax.sql.* and javax.naming.* classes to create and use SQL Server 2000 Driver for JDBC data sources. The SQL Server 2000 Driver for JDBC provides all the necessary JAR files that contain the required classes and interfaces.
+</p>
+<h3 id="539880" class="Heading2">
+  <a name="539880"> </a>Calling a Data Source in an Application
+</h3>
+<p id="539881" class="Body">
+  <a name="539881"> </a>Applications can call a SQL Server 2000 Driver for JDBC data source using a logical name to retrieve the javax.sql.DataSource object. This object loads the SQL Server 2000 Driver for JDBC and can be used to establish a connection to the underlying database. 
+</p>
+<p id="539882" class="Body">
+  <a name="539882"> </a>Once a SQL Server 2000 Driver for JDBC data source has been registered with JNDI, it can be used by your JDBC application as shown in the following example:
+</p>
+<pre  class="Preformatted">
+Context ctx = new InitialContext();<a name="539883"> </a>
+DataSource ds = (DataSource)ctx.lookup("jdbc/EmployeeDB");<a name="539884"> </a>
+Connection con = ds.getConnection("matt", "wwf");<a name="539885"> </a>
+</pre>
+<p id="539886" class="Body">
+  <a name="539886"> </a>In this example, the JNDI environment is first initialized. Next, the initial naming context is used to find the logical name of the SQL Server 2000 Driver for JDBC data source (EmployeeDB). The Context.lookup() method returns a reference to a Java object, which is narrowed to a javax.sql.DataSource object. Finally, the DataSource.getConnection() method is called to establish a connection with the underlying database.
+</p>
+<h3 id="539893" class="Heading2">
+  <a name="539893"> </a>Using Connection Pooling
+</h3>
+<p id="539894" class="Body">
+  <a name="539894"> </a>Connection pooling allows you to reuse connections rather than create a new one every time the SQL Server 2000 Driver for JDBC needs to establish a connection to the underlying database. Connection pooling manages connection sharing across different user requests to maintain performance and reduce the number of new connections that must be created. For example, compare the following transaction sequences.
+</p>
+<h5 id="539896" class="Heading4">
+  <a name="539896"> </a>Example A: Without Connection Pooling
+</h5>
+<ol type="1">
+  <li class="SmartList1" value="1"><a name="539897"> </a>The client application creates a connection.</li>
+</ol>
+<ol type="1">
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="2"><a name="539898"> </a>The client application sends a data access query.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="3"><a name="539899"> </a>The client application obtains the result set of the query.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="4"><a name="539900"> </a>The client application displays the result set to the end user.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="5"><a name="539901"> </a>The client application ends the connection.</li>
+  <p></p>
+</ol>
+<h5 id="539903" class="Heading4">
+  <a name="539903"> </a>Example B: With Connection Pooling
+</h5>
+<ol type="1">
+  <li class="SmartList1" value="1"><a name="539904"> </a>The client checks the connection pool for an unused connection.</li>
+</ol>
+<ol type="1">
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="2"><a name="539905"> </a>If an unused connection exists, it is returned by the pool implementation; otherwise, it creates a new connection.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="3"><a name="539906"> </a>The client application sends a data access query.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="4"><a name="539907"> </a>The client application obtains the result set of the query.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="5"><a name="539908"> </a>The client application displays the result set to the end user.</li>
+  <p></p>
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="6"><a name="539909"> </a>The client application returns the connection to the pool.</li>
+  <p></p>
+</ol>
+<p id="539910" class="Body">
+  <a name="539910"> </a>NOTE: The client application still calls &quot;close()&quot;, but the connection remains open and the pool is notified of the close request.
+</p>
+<p id="550074" class="Body">
+  <a name="550074"> </a>The pool implementation creates &quot;real&quot; database connections using the getPooledConnection() method of ConnectionPoolDataSource. Then, the pool implementation registers itself as a listener to the PooledConnection. When a client application requests a connection, the pool implementation (Pool Manager) assigns one of its available connections. If there is no connection available, the Pool Manager establishes a new connection and assigns it to that application. When the client application closes the connection, the Pool Manager is notified by the driver through the ConnectionEventListener interface that the connection is free and available for reuse. The pool implementation is also notified by the ConnectionEventListener interface when the client somehow corrupts the database connection, so that the pool implementation can remove that connection from the pool.
+</p>
+<p id="539912" class="Body">
+  <a name="539912"> </a>Once a SQL Server 2000 Driver for JDBC data source has been registered with JNDI, it can be used by your JDBC application as shown in the following example, typically through a third-party connection pool tool:
+</p>
+<pre  class="Preformatted">
+Context ctx = new InitialContext();<a name="539913"> </a>
+ConnectionPoolDataSource ds =<a name="547198"> </a>
+(ConnectionPoolDataSource)ctx.lookup("jdbc/EmployeeDB");<a name="998801"> </a>
+pooledConnection pcon = ds.getPooledConnection("matt", "wwf");<a name="547199"> </a>
+</pre>
+<p id="539916" class="Body">
+  <a name="539916"> </a>In this example, the JNDI environment is first initialized. Next, the initial naming context is used to find the logical name of the JDBC data source (EmployeeDB). The Context.lookup() method returns a reference to a Java object, which is narrowed to a javax.sql.ConnectionPoolDataSource object. Finally, the ConnectionPoolDataSource.getPooledConnection() method is called to establish a connection with the underlying database.
+</p>
+<p id="1000533" class="Body">
+  <a name="1000533"> </a>NOTE: JDBC drivers do not manage connection pooling. You must use an external connection pool manager.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="usejdbc3.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="usejdbc5.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

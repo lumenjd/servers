@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:59:29" />
+    <title>Installing Stored Procedures for JTA</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="920336" class="NewHTMLPage">
+  <a name="920336"> </a>Installing Stored Procedures for JTA
+</h2><hr />
+<p id="920337" class="Body">
+  <a name="920337"> </a>To use JDBC distributed transactions through JTA, the system administrator should use the following procedure to install SQL Server JDBC XA procedures. This must be repeated for each SQL Server installation that will be involved in a distributed transaction.
+</p>
+<ol type="1">
+  <li class="SmartList1" value="1"><a name="920338"> </a>Copy the file sqljdbc.dll from the SQL Server 2000 Driver for JDBC installation directory to the <em>SQL_Server_Root</em>/binn directory of the database server for SQL Server.</li>
+</ol>
+<ol type="1">
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="2"><a name="920339"> </a>From the server, use the ISQL utility to run the instjdbc.sql script. The system administrator should back up the master database before running instjdbc.sql.</li>
+  <p></p>
+
+<p><a name="920340"> </a>
+At a command prompt, use the following syntax to run instjdbc.sql:
+</p>
+
+</ol>
+<pre  class="Preformatted">
+ISQL -Usa -P<em>sa_password</em> -S<em>server_name</em> -i<em>location</em>\instjdbc.sql<a name="920341"> </a>
+
+<p><a name="920342"> </a>
+where:
+</p>
+<p><a name="920343"> </a>
+<em>sa_password</em> is the password of the system administrator.
+</p>
+<p><a name="920344"> </a>
+<em>server_name </em>is the name of the server on which SQL Server resides.
+</p>
+<p><a name="920345"> </a>
+<em>location</em> is the full path to instjdbc.sql. This script is located in the SQL Server 2000 Driver for JDBC installation directory.
+</p>
+
+</pre>
+<ol type="1">
+  <p></p>
+  <li class="SmartList1ListSpaceBeforeAfter" value="3"><a name="920346"> </a>The instjdbc.sql script generates many messages. In general, these messages can be ignored; however, you should scan the output for any messages that indicate an execution error. The last message should indicate that instjdbc.sql ran successfully. The script fails when there is not enough space available in master database to store the JDBC XA procedures or to log changes to existing procedures.</li>
+  <p></p>
+<pre  class="PreformattedRelative">
+<a name="920347"> </a>
+</pre>
+</ol>
+<p id="914058" class="Body">
+  <a name="914058"> </a>
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsqlsrv8.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

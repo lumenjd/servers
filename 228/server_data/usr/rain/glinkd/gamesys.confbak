@@ -1,0 +1,157 @@
+[LogclientClient]
+type            =   udp
+port            =   11100
+address         =   127.0.0.1
+so_sndbuf       =   16777216
+so_rcvbuf       =   16384
+accumulate      =   16777216
+
+[LogclientTcpClient]
+type            =   tcp
+port            =   11101
+address         =   127.0.0.1
+so_sndbuf       =   16777216
+so_rcvbuf       =   16384
+accumulate      =   16777216
+
+[ProviderServerID]
+192.168.1.102	=	0
+192.168.1.102	=	1
+192.168.1.102	=	2
+192.168.1.102	=	3
+192.168.1.102	=	4
+192.168.1.102	=	5
+192.168.1.102	=	6
+192.168.1.102	=	7
+192.168.1.102	=	8
+192.168.1.102	=	9
+192.168.1.102	=	10
+192.168.1.102	=	11
+
+GTEST			=	1
+gs01			=	2
+gs02			=	3
+gs03			=	4
+gs04			=	5
+gs05			=	6
+gs06			=	7
+gs07			=	8
+gs08			=	9
+gs09			=	10
+gs10			=	11
+
+[GLinkServer1]
+type			=	tcp
+port			=	29000
+address			=	0.0.0.0
+so_sndbuf		=	16384
+so_rcvbuf		=	16384
+ibuffermax		=	16384
+obuffermax		=	65535
+tcp_nodelay		=	0
+listen_backlog	=	10
+accumulate		=	131072
+max_users		=	3000
+max_conns		=	3192
+halflogin_users 	=   6000
+sender_interval	=	200000
+accumu_packets	=	32768
+mtrace			=	/tmp/m_trace.link
+close_discard           =       1
+urgency_support 	=   1
+;isec			=	2
+;iseckey		=	123
+;osec			=	2
+;oseckey		=	456
+compress		=	0
+version			=	10205
+
+[GLinkServer2]
+type			=	tcp
+port			=	29001
+address			=	0.0.0.0
+so_sndbuf		=	16384
+so_rcvbuf		=	16384
+ibuffermax		=	16384
+obuffermax		=	65535
+tcp_nodelay		=	0
+listen_backlog	=	10
+accumulate		=	131072
+max_users		=	3000
+max_conns		=	3192
+halflogin_users 	=   6000
+sender_interval	=	200000
+accumu_packets	=	32768
+mtrace			=	/tmp/m_trace.link
+close_discard           =       1
+urgency_support 	=   1
+;isec			=	2
+;iseckey		=	123
+;osec			=	2
+;oseckey		=	456
+compress		=	0
+version			=	10204
+
+[GDeliveryClient]
+type			=	tcp
+port			=	29100
+address			=	192.168.1.102
+so_sndbuf		=	16384
+so_rcvbuf		=	16384
+;so_broadcast	=	1
+tcp_nodelay		=	0
+accumulate		=	268435456
+;isec			=	2
+;iseckey		=	123
+;osec			=	2
+;oseckey		=	456
+
+[GProviderServer1]
+type			=	tcp
+port			=	29301
+address			=	0.0.0.0
+so_sndbuf		=	16384
+so_rcvbuf		=	16384
+;so_broadcast	=	1
+tcp_nodelay		=	0
+accumulate		=	268435456
+
+[GFactionClient]
+type                    =       tcp
+port                    =       29500
+address                 =       127.0.0.1
+so_sndbuf               =       16384
+so_rcvbuf               =       16384
+ibuffermax              =       1638400
+obuffermax              =       1638400
+;so_broadcast   =       1
+tcp_nodelay             =       0
+accumulate              =       268435456
+
+[GAntiCheatClient]
+type            =   tcp
+port            =   29701
+address         =   127.0.0.1
+so_sndbuf       =   16384
+so_rcvbuf       =   16384
+ibuffermax      =   1638400
+obuffermax      =   1638400
+;so_broadcast   =   1
+tcp_nodelay     =   0
+accumulate      =   268435456
+
+[storage]
+homedir				=	./dbhome
+datadir				=	dbdata
+logdir				=	dblogs
+backupdir			=	./backup
+cachesize			=	16777216
+errpfx				=	Storage
+checkpoint_interval	=	5
+backup_interval		=	60
+
+[ThreadPool]
+threads			=	(1,3)(100,1)(101,1)(0,1)
+max_queuesize		=	1048576
+prior_strict		=	1
+

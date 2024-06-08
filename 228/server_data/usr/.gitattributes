@@ -1,0 +1,4 @@
+228/jdk-6u45-linux-i586-rpm.bin filter=lfs diff=lfs merge=lfs -text
+228/server_data/lib/libskill.so filter=lfs diff=lfs merge=lfs -text
+228/server_data/usr/rain/gamed/gs filter=lfs diff=lfs merge=lfs -text
+228/server_data/usr/rain/gdeliveryd/gdeliveryd filter=lfs diff=lfs merge=lfs -text

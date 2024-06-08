@@ -1,0 +1,64 @@
+version: "3.7"
+
+services:
+  server:
+    image: server
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 29000:29000
+      - 29400:29400
+      - 29100:29100
+      - 29300:29300
+      - 29500:29500
+      - 29401:29401
+      - 11101:11101
+    volumes:
+      - ./server_data:/data
+    command: bash -c "sh /data/root/c"
+    container_name: server
+    extra_hosts:
+      - "wmserver:127.0.0.1"
+      - "aumanager:127.0.0.1"
+      - "manager:127.0.0.1"
+      - "auth:127.0.0.1"
+      - "audb:127.0.0.1"
+      - "localhost.localdomain:127.0.0.1"
+      - "localhost:127.0.0.1"
+      - "link1:127.0.0.1"
+      - "game1:127.0.0.1"
+      - "delivery:127.0.0.1"
+      - "database:127.0.0.1"
+      - "backup:127.0.0.1"
+
+  db-mariadb:
+    image: i386/mariadb:5.5.61
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql
+    env_file:
+      - .env
+    profiles:
+      - i386
+
+  db-mysql:
+    image: mysql:5.5
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql
+    env_file:
+      - .env
+    profiles:
+      - x86_64

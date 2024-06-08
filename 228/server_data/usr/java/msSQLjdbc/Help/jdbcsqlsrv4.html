@@ -1,0 +1,155 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:59:29" />
+    <title>Connecting to Named Instances</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="922593" class="NewHTMLPage">
+  <a name="922593"> </a>Connecting to Named Instances
+</h2><hr />
+<p id="922594" class="Body">
+  <a name="922594"> </a>Microsoft SQL Server 2000 supports multiple instances of a SQL Server database running concurrently on the same server. An instance is identified by an instance name. 
+</p>
+<p id="922595" class="Body">
+  <a name="922595"> </a>To connect to a named instance using a connection URL, use the following URL format:
+</p>
+<pre  class="Preformatted">
+jdbc:microsoft:sqlserver://<em>server_name</em>\\<em>instance_name</em> <a name="922596"> </a>
+</pre>
+<p id="922597" class="Body">
+  <a name="922597"> </a>NOTE: The first backslash character (\) in \\<em>instance_name</em> is an escape character.
+</p>
+<p id="922598" class="Body">
+  <a name="922598"> </a>where: 
+</p>
+<p id="922599" class="Body">
+  <a name="922599"> </a><em>server_name</em> is the IP address or hostname of the server.
+</p>
+<p id="922600" class="Body">
+  <a name="922600"> </a><em>instance_name</em> is the name of the instance to which you want to connect on the server.
+</p>
+<p id="922601" class="Body">
+  <a name="922601"> </a>For example, the following connection URL connects to an instance named instance1 on server1:
+</p>
+<pre  class="Preformatted">
+jdbc:microsoft:sqlserver://server1\\instance1;User=test;Password=secret<a name="922602"> </a>
+</pre>
+<p id="922603" class="Body">
+  <a name="922603"> </a>To connect to a named instance using a data source, specify the ServerName connection property as described in the <a href="jdbcsqlsrv3.html#914985">&quot;Connection String Properties&quot;</a> topic.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsqlsrv3.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsqlsrv5.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

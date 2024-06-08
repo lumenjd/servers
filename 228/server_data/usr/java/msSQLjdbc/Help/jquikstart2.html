@@ -1,0 +1,198 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 11:03:19" />
+    <title>Connecting to a Database</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="922160" class="NewHTMLPage">
+  <a name="922160"> </a>Connecting to a Database
+</h2><hr />
+<p id="922070" class="Body">
+  <a name="922070"> </a>Once the driver is installed, you can connect from your application to your database in two ways: with a connection URL through the JDBC driver manager, or with a JNDI data source. This quick start explains how to establish your database connection using a connection URL. See <a href="usejdbc.html#998538">&quot;Using the SQL Server 2000 Driver for JDBC&quot;</a> for details on using data sources.
+</p>
+<p id="922071" class="Body">
+  <a name="922071"> </a>You can connect through the JDBC driver manager with the method DriverManager.getConnection. This method uses a string containing a URL. Use the following steps to load the driver from your JDBC application. 
+</p>
+<h3 id="922072" class="Heading2">
+  <a name="922072"> </a>1. Setting the Classpath 
+</h3>
+<p id="922773" class="Body">
+  <a name="922773"> </a>The SQL Server 2000 Driver for JDBC needs to be defined in your CLASSPATH variable. The CLASSPATH is the search string that your Java Virtual Machine (JVM) uses to locate the JDBC drivers on your computer. If the drivers are not on your CLASSPATH, you receive the error &quot;class not found&quot; when trying to load the driver. Set your system CLASSPATH to include the following entries, where <code><em>install_dir</em></code> is the path to your SQL Server 2000 Driver for JDBC installation directory: 
+</p>
+<pre  class="Preformatted">
+<code><em>install_dir</em></code>/lib/msbase.jar <a name="922186"> </a>
+<code><em>install_dir</em></code>/lib/msutil.jar <a name="922192"> </a>
+<code><em>install_dir</em></code>/lib/mssqlserver.jar<a name="922198"> </a>
+</pre>
+<h5 id="922077" class="Heading4">
+  <a name="922077"> </a>Windows Example
+</h5>
+<pre  class="Preformatted">
+CLASSPATH=.;c:\Microsoft SQL Server 2000 Driver for JDBC\lib\msbase.jar;c:\Microsoft SQL Server 2000 Driver for JDBC\lib\msutil.jar;c:\Microsoft SQL Server 2000 Driver for JDBC<a name="922227"> </a>
+\lib\mssqlserver.jar<a name="923070"> </a>
+</pre>
+<h5 id="922691" class="Heading4">
+  <a name="922691"> </a>UNIX Example
+</h5>
+<pre  class="Preformatted">
+CLASSPATH=.;/home/user1/mssqlserver2000jdbc/lib/msbase.jar;/home/user1/mssqlserver2000jdbc/lib/msutil.jar;/home/user1/mssqlserver2000jdbc/lib/mssqlserver.jar<a name="922702"> </a>
+</pre>
+<h3 id="922228" class="Heading2">
+  <a name="922228"> </a>2. Registering the Driver 
+</h3>
+<p id="922804" class="Body">
+  <a name="922804"> </a>Registering the driver tells the JDBC driver manager which driver to load. When loading a driver using class.forName(), you must specify the name of the driver: 
+</p>
+<p id="922805" class="Body">
+  <a name="922805"> </a>com.microsoft.jdbc.sqlserver.SQLServerDriver 
+</p>
+<p id="922806" class="Body">
+  <a name="922806"> </a>For example: 
+</p>
+<pre  class="Preformatted">
+Class.forName(&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;); <a name="922086"> </a>
+</pre>
+<h3 id="922087" class="Heading2">
+  <a name="922087"> </a>3. Passing the Connection URL 
+</h3>
+<p id="923206" class="Body">
+  <a name="923206"> </a>After registering the driver, you must pass your database connection information in the form of a connection URL. The following is a template URL for the SQL Server 2000 Driver for JDBC. Substitute the values specific to your database. (For instructions on connecting to named instances, see <a href="jdbcsqlsrv4.html#922593">&quot;Connecting to Named Instances&quot;</a> in the SQL Server 2000 Driver for JDBC topic.)
+</p>
+<pre  class="Preformatted">
+jdbc:microsoft:sqlserver://<em>server_name</em>:1433 <a name="923207"> </a>
+</pre>
+<p id="923196" class="Body">
+  <a name="923196"> </a>For example, to specify a connection URL that includes the user ID &quot;username&quot; and the password &quot;secret&quot;: 
+</p>
+<pre  class="Preformatted">
+Connection conn = DriverManager.getConnection<a name="922672"> </a>
+  (&quot;jdbc:microsoft:sqlserver://server1:1433&quot;,&quot;username&quot;,&quot;secret&quot;); <a name="922652"> </a>
+</pre>
+<p id="922102" class="Body">
+  <a name="922102"> </a>NOTES: 
+</p>
+<p id="922103" class="Body">
+  <a name="922103"> </a>The <span style="color: #000000;  font-style: italic; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline">server_name</span> is an IP address or a host name, assuming that your network resolves host names to IP addresses. You can test this by using the ping command to access the host name and verifying that you receive a reply with the correct IP address. 
+</p>
+<p id="922104" class="Body">
+  <a name="922104"> </a>The numeric value after the server name is the port number on which the database is listening. The values listed here are sample defaults. You should determine the port number that your database is using and substitute that value. 
+</p>
+<p id="922403" class="Body">
+  <a name="922403"> </a>You can find the complete list of Connection URL parameters in <a href="jdbcsqlsrv3.html#914985">&quot;Connection String Properties&quot;</a> for the SQL Server 2000 Driver for JDBC.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jquikstart.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="usejdbc.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

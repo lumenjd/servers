@@ -1,0 +1,274 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:58" />
+    <title>jdbcsupp12.html</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="544845" class="NewHTMLPage">
+  <a name="544845"> </a>
+</h2><hr />
+<p id="544067" class="Body">
+  <a name="544067"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><h4 id="544037" class="Heading3">
+  <a name="544037"> </a>ResultSetMetaData Object  
+</h4>
+<a name="544043"> </a><div id="544043" class="CellHeading">Methods</div></th>
+    <th><a name="544046"> </a><div id="544046" class="CellHeading"><br /></div><a name="544047"> </a><div id="544047" class="CellHeading">Version</div><a name="544048"> </a><div id="544048" class="CellHeading">Introduced</div></th>
+    <th><a name="544050"> </a><div id="544050" class="CellHeading"><br /></div><a name="544052"> </a><div id="544052" class="CellHeading"><br /></div><a name="544053"> </a><div id="544053" class="CellHeading">Supported</div></th>
+    <th><a name="544055"> </a><div id="544055" class="CellHeading"><br /></div><a name="544057"> </a><div id="544057" class="CellHeading"><br /></div><a name="544058"> </a><div id="544058" class="CellHeading">Comments</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544235"> </a><div id="544235" class="CellBody">String getCatalogName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544237"> </a><div id="544237" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544239"> </a><div id="544239" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544241"> </a><div id="544241" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544227"> </a><div id="544227" class="CellBody">String getColumnClassName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544229"> </a><div id="544229" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="544231"> </a><div id="544231" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544233"> </a><div id="544233" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544219"> </a><div id="544219" class="CellBody">int getColumnCount () </div></td>
+    <td bgcolor="#E6E6E6"><a name="544221"> </a><div id="544221" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544223"> </a><div id="544223" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544225"> </a><div id="544225" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544211"> </a><div id="544211" class="CellBody">int getColumnDisplaySize (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544213"> </a><div id="544213" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544215"> </a><div id="544215" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544217"> </a><div id="544217" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544203"> </a><div id="544203" class="CellBody">String getColumnLabel (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544205"> </a><div id="544205" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544207"> </a><div id="544207" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544209"> </a><div id="544209" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544195"> </a><div id="544195" class="CellBody">String getColumnName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544197"> </a><div id="544197" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544199"> </a><div id="544199" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544201"> </a><div id="544201" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544187"> </a><div id="544187" class="CellBody">int getColumnType (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544189"> </a><div id="544189" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544191"> </a><div id="544191" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544193"> </a><div id="544193" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544179"> </a><div id="544179" class="CellBody">String getColumnTypeName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544181"> </a><div id="544181" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544183"> </a><div id="544183" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544185"> </a><div id="544185" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544171"> </a><div id="544171" class="CellBody">int getPrecision (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544173"> </a><div id="544173" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544175"> </a><div id="544175" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544177"> </a><div id="544177" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544163"> </a><div id="544163" class="CellBody">int getScale (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544165"> </a><div id="544165" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544167"> </a><div id="544167" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544169"> </a><div id="544169" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544155"> </a><div id="544155" class="CellBody">String getSchemaName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544157"> </a><div id="544157" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544159"> </a><div id="544159" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544161"> </a><div id="544161" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544147"> </a><div id="544147" class="CellBody">String getTableName (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544149"> </a><div id="544149" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544151"> </a><div id="544151" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544153"> </a><div id="544153" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544139"> </a><div id="544139" class="CellBody">boolean isAutoIncrement (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544141"> </a><div id="544141" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544143"> </a><div id="544143" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544145"> </a><div id="544145" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544131"> </a><div id="544131" class="CellBody">boolean isCaseSensitive (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544133"> </a><div id="544133" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544135"> </a><div id="544135" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544137"> </a><div id="544137" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544123"> </a><div id="544123" class="CellBody">boolean isCurrency (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544125"> </a><div id="544125" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544127"> </a><div id="544127" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544129"> </a><div id="544129" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544115"> </a><div id="544115" class="CellBody">boolean isDefinitelyWritable (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544117"> </a><div id="544117" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544119"> </a><div id="544119" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544121"> </a><div id="544121" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544107"> </a><div id="544107" class="CellBody">int isNullable (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544109"> </a><div id="544109" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544111"> </a><div id="544111" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544113"> </a><div id="544113" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544099"> </a><div id="544099" class="CellBody">boolean isReadOnly (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544101"> </a><div id="544101" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544103"> </a><div id="544103" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544105"> </a><div id="544105" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544091"> </a><div id="544091" class="CellBody">boolean isSearchable (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544093"> </a><div id="544093" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544095"> </a><div id="544095" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544097"> </a><div id="544097" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544083"> </a><div id="544083" class="CellBody">boolean isSigned (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544085"> </a><div id="544085" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544087"> </a><div id="544087" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544089"> </a><div id="544089" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="544075"> </a><div id="544075" class="CellBody">boolean isWritable (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="544077"> </a><div id="544077" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="544079"> </a><div id="544079" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="544081"> </a><div id="544081" class="CellBody"> </div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p id="545389" class="Body">
+  <a name="545389"> </a>
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsupp11.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp13.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

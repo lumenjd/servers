@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:48" />
+    <title>Using the SQL Server 2000 Driver for JDBC on a Java 2 Platform</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="537191" class="NewHTMLPage">
+  <a name="537191"> </a>Using the SQL Server 2000 Driver for JDBC on a Java 2 Platform
+</h2><hr />
+<p id="537192" class="Body">
+  <a name="537192"> </a><span style="color: #000000;  font-style: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline">W</span>hen using the SQL Server 2000 Driver for JDBC on a Java 2 Platform with the standard security manager enabled, you must give the driver some additional permissions. Refer to your Java 2 Platform documentation for more information about the Java 2 Platform security model and permissions. 
+</p>
+<p id="537193" class="Body">
+  <a name="537193"> </a>You can run an application on a Java 2 Platform with the standard security manager using:
+</p>
+<pre  class="Preformatted">
+&quot;java -Djava.security.manager <em>application_class_name</em>&quot;<a name="537194"> </a>
+</pre>
+<p id="537195" class="Body">
+  <a name="537195"> </a>where <em>application_class_name</em> is the class name of the application.
+</p>
+<p id="548940" class="Body">
+  <a name="548940"> </a>Web browser applets running in the Java 2 plug-in are always running in a Java Virtual Machine with the standard security manager enabled. To enable the necessary permissions, you must add them to the security policy file of the Java 2 Platform. This security policy file can be found in the jre/lib/security subdirectory of the Java 2 Platform installation directory.
+</p>
+<p id="544983" class="Body">
+  <a name="544983"> </a>To use JDBC data sources, all code bases must have the following permissions: 
+</p>
+<pre  class="Preformatted">
+// permissions granted to all domains<a name="544985"> </a>
+grant {<a name="544986"> </a>
+// DataSource access<a name="537200"> </a>
+permission java.util.PropertyPermission &quot;java.naming.*&quot;, &quot;read,write&quot;;<a name="537201"> </a>
+// Adjust the server host specification for your environment<a name="537202"> </a>
+permission java.net.SocketPermission &quot;*.microsoft.com:0-65535&quot;, &quot;connect&quot;;<a name="537203"> </a>
+};<a name="537204"> </a>
+</pre>
+<p id="1000716" class="Body">
+  <a name="1000716"> </a>To use insensitive scrollable cursors, and perform client-side sorting of some DatabaseMetaData ResultSets, all code bases must have access to temporary files. If access to temporary files is not available, the driver may throw an exception indicating that it is unable to set up a static cursor cache.
+</p>
+<p id="1000717" class="Body">
+  <a name="1000717"> </a>For JDK 1.1 environments, access to &quot;current working directory&quot; must be granted.
+</p>
+<p id="549270" class="Body">
+  <a name="549270"> </a>For Java 2 environments, access to the temporary directory specified by the VM configuration must be granted.
+</p>
+<p id="549293" class="Body">
+  <a name="549293"> </a>The following is an example of permissions being granted for the C:\TEMP directory:
+</p>
+<pre  class="Preformatted">
+// permissions granted to all domains<a name="537206"> </a>
+grant {<a name="537207"> </a>
+// Permission to create and delete temporary files.<a name="537208"> </a>
+// Adjust the temporary directory for your environment.<a name="537209"> </a>
+permission java.io.FilePermission &quot;C:\\TEMP\\-&quot;, &quot;read,write,delete&quot;;<a name="537210"> </a>
+};<a name="537211"> </a>
+</pre>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="usejdbc5.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="usejdbc7.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

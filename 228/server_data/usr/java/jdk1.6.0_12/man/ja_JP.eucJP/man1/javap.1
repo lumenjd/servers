@@ -1,0 +1,346 @@
+." @(#)javap.1  1.1 08/06/17 1 SMI;
+."  Copyright ��� 2002\-2006 Sun Microsystems, Inc. All Rights Reserved.
+." `
+.TH javap 1 "17 Jun 2008"
+." Generated from HTML pages by html2man (author: Eric Armstrong)
+
+.LP
+.SH "̾��"
+javap \- Java ���饹�ե�����ե�����֥�
+.LP
+.RS 3
+
+.LP
+.LP
+���饹�ե������ե�����֥뤷�ޤ���
+.LP
+.RE
+.SH "����"
+.LP
+
+.LP
+.nf
+\f3
+.fl
+javap [ \fP\f3options\fP\f3 ] class. . .
+.fl
+\fP
+.fi
+
+.LP
+.SH "����"
+.LP
+
+.LP
+.LP
+\f3javap\fP ���ޥ�ɤϡ����饹�ե������ե�����֥뤷�ޤ������ν��Ϥϻ��ꤹ�륪�ץ����ˤ��ۤʤ�ޤ������ץ�������ꤷ�ʤ���硢\f3javap\fP �ϡ����Υѥå��������Ϥ��줿���饹�� protected ����� public �Υե�����ɤȥ᥽�åɤ���Ϥ��ޤ��� \f3javap\fP �Ϥ��ν��Ϥ�ɸ����Ϥ�ɽ�����ޤ������Ȥ��С����Υ��饹����򥳥�ѥ��뤹��Ȥ��ޤ���
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+import java.awt.*;
+.fl
+import java.applet.*;
+.fl
+
+.fl
+public class DocFooter extends Applet {
+.fl
+        String date;
+.fl
+        String email;
+.fl
+
+.fl
+        public void init() {
+.fl
+                resize(500,100);
+.fl
+                date = getParameter("LAST_UPDATED");
+.fl
+                email = getParameter("EMAIL");
+.fl
+        }
+.fl
+
+.fl
+        public void paint(Graphics g) {
+.fl
+                g.drawString(date + " by ",100, 15);
+.fl
+                g.drawString(email,290,15);
+.fl
+        }
+.fl
+}
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.LP
+\f3javap DocFooter\fP ���⤿�餹���Ϥϼ��Τ褦�ˤʤ�ޤ���
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+Compiled from DocFooter.java
+.fl
+public class DocFooter extends java.applet.Applet {
+.fl
+    java.lang.String date;
+.fl
+    java.lang.String email;
+.fl
+    public DocFooter();
+.fl
+    public void init();
+.fl
+    public void paint(java.awt.Graphics);
+.fl
+}
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.LP
+\f3javap \-c DocFooter\fP ���⤿�餹���Ϥϼ��Τ褦�ˤʤ�ޤ���
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+Compiled from DocFooter.java
+.fl
+public class DocFooter extends java.applet.Applet {
+.fl
+    java.lang.String date;
+.fl
+    java.lang.String email;
+.fl
+    public DocFooter();
+.fl
+    public void init();
+.fl
+    public void paint(java.awt.Graphics);
+.fl
+}
+.fl
+
+.fl
+Method DocFooter()
+.fl
+   0 aload_0
+.fl
+   1 invokespecial #1 <Method java.applet.Applet()>
+.fl
+   4 return
+.fl
+
+.fl
+Method void init()
+.fl
+   0 aload_0
+.fl
+   1 sipush 500
+.fl
+   4 bipush 100
+.fl
+   6 invokevirtual #2 <Method void resize(int, int)>
+.fl
+   9 aload_0
+.fl
+  10 aload_0
+.fl
+  11 ldc #3 <String "LAST_UPDATED">
+.fl
+  13 invokevirtual #4 <Method java.lang.String getParameter(java.lang.String)>
+.fl
+  16 putfield #5 <Field java.lang.String date>
+.fl
+  19 aload_0
+.fl
+  20 aload_0
+.fl
+  21 ldc #6 <String "EMAIL">
+.fl
+  23 invokevirtual #4 <Method java.lang.String getParameter(java.lang.String)>
+.fl
+  26 putfield #7 <Field java.lang.String email>
+.fl
+  29 return
+.fl
+
+.fl
+Method void paint(java.awt.Graphics)
+.fl
+   0 aload_1
+.fl
+   1 new #8 <Class java.lang.StringBuffer>
+.fl
+   4 dup
+.fl
+   5 invokespecial #9 <Method java.lang.StringBuffer()>
+.fl
+   8 aload_0
+.fl
+   9 getfield #5 <Field java.lang.String date>
+.fl
+  12 invokevirtual #10 <Method java.lang.StringBuffer append(java.lang.String)>
+.fl
+  15 ldc #11 <String " by ">
+.fl
+  17 invokevirtual #10 <Method java.lang.StringBuffer append(java.lang.String)>
+.fl
+  20 invokevirtual #12 <Method java.lang.String toString()>
+.fl
+  23 bipush 100
+.fl
+  25 bipush 15
+.fl
+  27 invokevirtual #13 <Method void drawString(java.lang.String, int, int)>
+.fl
+  30 aload_1
+.fl
+  31 aload_0
+.fl
+  32 getfield #7 <Field java.lang.String email>
+.fl
+  35 sipush 290
+.fl
+  38 bipush 15
+.fl
+  40 invokevirtual #13 <Method void drawString(java.lang.String, int, int)>
+.fl
+  43 return
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.SH "���ץ����"
+.LP
+
+.LP
+.RS 3
+.TP 3
+\-help 
+\f3javap\fP �Υإ�ץ�å���������Ϥ��ޤ��� 
+.TP 3
+\-l 
+���ֹ�ȶɽ��ѿ��ơ��֥��ɽ�����ޤ��� 
+.TP 3
+\-b 
+JDK 1.1 �� \f3javap\fP �Ȥβ��̸ߴ������ݾڤ��ޤ��� 
+.TP 3
+\-public 
+public ���饹����ӥ��С�������ɽ�����ޤ��� 
+.TP 3
+\-protected 
+protected ����� public �Υ��饹�ȥ��С�������ɽ�����ޤ��� 
+.TP 3
+\-package 
+package��protected������� public �Υ��饹�ȥ��С�������ɽ�����ޤ�������ϥǥե���Ȥ�����Ǥ��� 
+.TP 3
+\-private 
+���٤ƤΥ��饹�ȥ��С���ɽ�����ޤ��� 
+.TP 3
+\-Jflag 
+��󥿥��ॷ���ƥ��ľ�� \f2flag\fP ���Ϥ��ޤ���������򼡤˼����ޤ��� 
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+javap \-J\-version
+.fl
+javap \-J\-Djava.security.manager \-J\-Djava.security.policy=MyPolicy MyClassName
+.fl
+\fP
+.fi
+.RE
+.TP 3
+\-s 
+�����η������˥��㡼����Ϥ��ޤ��� 
+.TP 3
+\-c 
+���饹�γƥ᥽�åɤΤ���˵ե�����֥뤵��륳���ɡ����ʤ�� Java �Х��ȥ����ɤ�������̿���ɽ�����ޤ���������
+.na
+\f2��Java Virtual Machine Specification��\fP @
+.fi
+http://java.sun.com/docs/books/vmspec/�˥ɥ�����Ȳ�����Ƥ��ޤ��� 
+.TP 3
+\-verbose 
+�᥽�åɤΥ����å�������������� \f2locals\fP �� \f2args\fP �ο�����Ϥ��ޤ��� 
+.TP 3
+\-classpath path 
+\f3javap\fP �����饹��õ������˻��Ѥ���ѥ�����ꤷ�ޤ����ǥե���Ȥޤ��� CLASSPATH �Ķ��ѿ�������񤭤��ޤ����ǥ��쥯�ȥ�ϥ������ʬ�䤷�ޤ����������äơ�\f2path\fP �ΰ��̷����ϼ��Τ褦�ˤʤ�ޤ��� 
+.nf
+\f3
+.fl
+   .:<your_path>
+.fl
+\fP
+.fi
+��򼨤��ޤ��� 
+.nf
+\f3
+.fl
+.:/home/avh/classes:/data/usr/local/java/classes
+.fl
+\fP
+.fi
+.TP 3
+\-bootclasspath path 
+�֡��ȥ��ȥ�åץ��饹������ɤ���ѥ�����ꤷ�ޤ����֡��ȥ��ȥ�åץ��饹�ϡ��ǥե���ȤǤ� \f2jre/lib/rt.jar\fP �����¾�Τ����Ĥ��� JAR �ե����� �ˤ��롢���� Java 2 �ץ�åȥե������������륯�饹�Ǥ��� 
+.TP 3
+\-extdirs dirs 
+���󥹥ȡ��뤵�줿��ĥ��ǽ�򸡺�������򥪡��С��饤�ɤ��ޤ���The default location for extensions is the value of \f2java.ext.dirs\fP. 
+.RE
+
+.LP
+.SH "�Ķ��ѿ�"
+.LP
+
+.LP
+.RS 3
+.TP 3
+CLASSPATH 
+�桼����������饹�ؤΥѥ��򥷥��ƥ�˻��ꤷ�ޤ����ǥ��쥯�ȥ�ϥ������ʬ�䤷�ޤ��� ������򼨤��ޤ��� 
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+.:/home/avh/classes:/data/usr/local/java/classes
+.fl
+\fP
+.fi
+.RE
+.RE
+
+.LP
+.SH "��Ϣ����"
+.LP
+
+.LP
+.LP
+javac(1)�� java(1)��jdb(1)��javah(1)��javadoc(1)
+.LP
+
+.LP
+ 

@@ -1,0 +1,161 @@
+     MSfixes.txt
+     Microsoft SQL Server 2000 Driver for JDBC
+     Service Pack 3
+     Version 2.2.0040
+     May 2004
+
+
+     Modifications from Beta 1 to Beta 2, December 2001 to February 2002
+
+Issue # | Description of Issue
+
+1025718 | Statement.setQueryTimeout() is not supported, but 
+Statement.getQueryTimeout() returns an error.
+
+1026189 | java.sql.SQLException: [Microsoft][SQLServer JDBC 
+Driver]Error establishing socket.
+
+1031980 | JDBC: Performance problem with Resulset.next() and 
+Resultset.absolute().
+
+1027059 | No excepton is raised for 3/0 in a select statement.
+
+1027837 | JDBC Specs: java.sql.SQLException when using Transactions 
+with multiple active statements on a connection.
+
+1027832 | JDBC: Unexpected token type: DONEINPROC with FOR XML clause.
+
+1027971 | JDBC: Unecessary SQL batch after every connection.
+
+1029281 | Request message at query timeout to be changed.
+
+1030750 | JDBC: Connection.getCatalog prevents data from being 
+returned.
+
+1030999 | JDBC allows insertion of invalid date.
+
+1031976 | Cannot update row when a column has a constraint and 
+ResultSet.absolute() is used
+
+1031237 | DriverManager.getConnection(....) throws InvalidURL exception 
+when blank password used.   
+
+
+     Modifications from Beta 2 to RC 2, February 2002 to April 2002
+
+Issue # | Description of Issue
+
+1030750 | Connection.getCatalog prevents data from being returned if 
+the connection is using SelectMethod=direct.
+
+1032161 | Beta 2 performance issue with JD Edwards.
+
+1032460 | Prepared Inserts of BLOB data hangs on non-dbo table.
+
+1032797 | Cannot update Text data with updatable Resultset using 
+Resultset.updateAsciiStream().
+
+1032632 | DBCS/UCS2 Conversion incorrect for Euro character with Latin1 
+collation.
+
+1032883 | Null pointer exception when directory does not allow writes.
+
+1033111 | Metadata does not indicate that the result set is updateable.
+
+1033227 | Sysprocesses table has no values in net_address, hostname, 
+hostprocess fields.
+
+1033274 | No hostname or appname information provided.
+
+
+     Modifications from GA release to Service Pack 1, April 2002 to December 2002
+
+Issue #  | Description of Issue
+
+15000482 | Driver is not translating SQL_LATIN1_General_CP1253_xxx collation to 
+Unicode. The translation only works with the Windows collation at Greek.
+
+15000662 | PreparedStatement throws invalid parameter binding exception when 
+table name contains space and table name surrounded with [  ].
+
+15000665 | ResultMetaData does not return Tablename of the ResultSet.
+
+15000690 | Make hostname a connection attribute.
+
+15000818 | Allow connecting to instances via instance name instead of port 
+number.
+
+15001589 | Handle leaks in sqljdbc.dll when using XA Connection.
+
+15001808 | Unsupported data conversion error when calling 
+PreparedStatement.setObject with a scale value for a DataTime column.
+
+15002367 | Performance degradation between build 22 and 26 using method 
+rs.insertRow() for batch inserts.
+
+15003241 | Modification to driver for working around a flaw in certain 
+VMs that could result in a low memory situation and eventual VM Allocation 
+Failure.
+
+
+     Modifications from Service Pack 1 December 2002 to Service Pack 1 January 2003
+
+Issue #  | Description of Issue
+
+15003208 | Socket error and disconnection when driver packet send size met or exceeded database packet receive size.
+
+
+     Modifications from Service Pack 1 January 2003 to Service Pack 1 March 2003
+
+Issue #  | Description of Issue
+
+15005094 | String data is truncated to 4000 characters when retrieving data from a varchar(8000) output parameter.
+
+15005141 | Driver generates an Unsupported data conversion error when trying to retrieve NULL
+timestamp value as a Calendar object.
+     
+
+     Modifications from Service Pack 1 March 2003 to Service Pack 2 August 2003
+
+Issue #  | Description of issue
+
+15002665 | When trying to update multiple TimeStamp fields with values set by the Timestamp.setTime() method, those fields are updated with the value for the last Timestamp field.
+
+15004136 | Packet size adjustment method changed to minimize "Connection reset by peer" errors.
+
+15005632 | Using getObject() to retrieve date from a real column defined with NOT NULL causes driver to return an error "Value can not be converted to requested type".
+
+15006187 | Error message does not clearly explain that the COMPUTE BY clause is not supported. 
+
+15006238 | Driver modified to allow application to repeatedly call "recover" to obtain entire list of in-doubt XA transactions.
+
+15006494 | Server-side cursors are not being closed if the application never materialized the result set.
+
+15006566 | Current trasaction isolation level is only set on a cloned connection if the catalog has also been changed on the primary connection.
+
+DEF0000038 | Driver returns "Column Index 3 out of range" on a SELECT statment LEFT JOIN.
+
+DEF0000122 | Null date, time, and timestamp object references are not being handled by PreparedStatement.
+
+DEF0000123 | Driver modified to improve performance of DatabaseMetaData.getTables().
+
+DEF0000129 | Driver modified to utilize VM to obtain trasliterations of charactersets not explicitly listed in the transliteration.properties file.
+
+
+     Modifications from Service Pack 2 August 2003 to Service Pack 3 May 2004
+
+Issue #  | Description of issue
+
+DEF0000192 | When a query timed out, the driver did not throw the query timeout exception at execute time.
+
+DEF0000386 | Connection.nativeSQL did not return the SQL that the driver sent to the database.
+
+DEF0000395 | Driver generated a NullPointerException when executing subsequent SQL commands on a statement object after a cancel was issued on the statement object.
+
+
+DEF0000643 | SQLWarning class only received the warning message and the error code was always returned as 0.
+
+DEF0000686 | Batch update processing was modified. The driver now handles batch statements that do not return update counts or resultsets.
+
+-----------
+End of File

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+/usr/bin/killall gs2
+/bin/sleep 8
+cd /home/game/game/
+./gs2 gs.conf gmserver.conf gsalias.conf > game1.log &
+./gs2 gs.conf gmserver.conf gsalias2.conf > game2.log &
+./gs2 gs.conf gmserver.conf gsalias3.conf > game3.log &
+
+

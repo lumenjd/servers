@@ -1,0 +1,341 @@
+." @(#)rmid.1  1.1 08/06/17 1 SMI;
+." Copyright ��� 2004\-2006 Sun Microsystems, Inc. All Rights Reserved. \ �����Ȥ�������: rmi\-comments@java.sun.com
+." `
+.TH rmid 1 "17 Jun 2008"
+." Generated from HTML pages by html2man (author: Eric Armstrong)
+
+.LP
+.SH "̾��"
+rmid \- Java RMI ��ư�����ƥ�ǡ����
+.LP
+.RS 3
+
+.LP
+.LP
+\f3rmid\fP �ǵ�ư�����ƥ�ǡ����򳫻Ϥ���ȡ����֥������Ȥ��ۥޥ��� (VM) ����Ͽ���Ƶ�ư�Ǥ���褦�ˤʤ�ޤ���
+.LP
+.RE
+.SH "����"
+.LP
+
+.LP
+.nf
+\f3
+.fl
+rmid [options]
+.fl
+\fP
+.fi
+
+.LP
+.SH "����"
+.LP
+
+.LP
+.LP
+\f3rmid\fP �ġ���ϡ���ư�����ƥ�ǡ����򳫻Ϥ��ޤ�����ư�����ƥ�ǡ����򳫻Ϥ��Ƥ���Ǥʤ��ȡ���ư��ǽ���֥������Ȥ�ư�����ƥ����Ͽ�����ꡢVM ��ǵ�ư�����ꤹ�뤳�Ȥ��Ǥ��ޤ��󡣵�ư��ǽ�ʥ�⡼�ȥ��֥������Ȥ�Ȥä��ץ������κ�����ˡ�ξܺ٤ϡ�
+.na
+\f2��Java RMI ���͡�\fP @
+.fi
+http://java.sun.com/javase/6/docs/platform/rmi/spec/rmiTOC.html�����
+.na
+\f2�ֵ�ư�Υ��塼�ȥꥢ���\fP @
+.fi
+http://java.sun.com/javase/6/docs/technotes/guides/rmi/activation/overview.html�򻲾Ȥ��Ƥ��� ������
+.LP
+.LP
+�ǡ�����ư����ˤϡ����Τ褦�ˡ��������ƥ����ݥꥷ���ե��������ꤷ�� \f2rmid\fP ���ޥ�ɤ�¹Ԥ��ޤ���
+.LP
+.nf
+\f3
+.fl
+    rmid \-J\-Djava.security.policy=rmid.policy
+.fl
+\fP
+.fi
+
+.LP
+.LP
+\f3��:\fP\f2rmid\fP �� Sun �� ������¹Ԥ����硢�ǥե���ȤǤϡ��������ƥ����ݥꥷ���ե��������ꤹ��ɬ�פ�����ޤ��� ����ϡ���ư���롼���Ѥ� VM ��ư���뤿��˳� \f2ActivationGroupDesc\fP ��ξ������ѤǤ��뤫�ɤ����� \f2rmid\fP �����ڤǤ���褦�ˤ��뤿��Ǥ����äˡ�\f2ActivationGroupDesc\fP �Υ��󥹥ȥ饯�����Ϥ���� \f2CommandEnvironment\fP ��Ǥ�դ� \f2Properties\fP �ˤ�äƻ��ꤵ��륳�ޥ�ɤ���ӥ��ץ����ϡ�\f2rmid\fP �Υ������ƥ����ݥꥷ���ե�������������Ū�˵��Ĥ��뤳�Ȥ�ɬ�פˤʤ�ޤ�����\f2sun.rmi.activation.execPolicy\fP �ץ��ѥƥ������ͤϡ���ư���롼���Ѥ� VM ��ư���뤿��� \f2ActivationGroupDesc\fP ��ξ������ѤǤ��뤫�ɤ�����Ƚ�Ǥ���Ȥ��� \f2rmid\fP �����Ѥ���ݥꥷ������ꤷ�ޤ���
+.LP
+.LP
+\f2rmid\fP ��ǥե��������Ǽ¹Ԥ���ȡ����Τ褦�ʽ������Ԥ��ޤ���
+.LP
+.RS 3
+.TP 2
+o
+�����ƥ��١�����ư�����ǥե���ȥݡ��� 1098 �������쥸���ȥ��ư���� 
+.TP 2
+o
+���������쥸���ȥ����ǡ�\f2ActivationSystem\fP �� \f2java.rmi.activation.ActivationSystem\fP �Ȥ���̾���˥Х���ɤ��� 
+.RE
+
+.LP
+.LP
+�쥸���ȥ�ˤۤ��Υݡ��Ȥ���ꤹ��ˤϡ�\f2rmid\fP �ε�ư���� \f2\-port\fP ���ץ�������ꤷ�ʤ���Фʤ�ޤ��󡣼�����򼨤��ޤ���
+.LP
+.nf
+\f3
+.fl
+    rmid \-J\-Djava.security.policy=rmid.policy \-port 1099
+.fl
+\fP
+.fi
+
+.LP
+.LP
+���Υ��ޥ�ɤϡ���ư�����ƥ�ǡ����򳫻Ϥ����쥸���ȥ�Υǥե���ȥݡ��� 1099 �ǥ쥸���ȥ�򳫻Ϥ��ޤ���
+.LP
+.SS 
+rmid �� inetd/xinetd ���鳫�Ϥ���
+.LP
+.LP
+\f2rmid\fP �򥳥ޥ�ɹԤ��鳫�Ϥ���ˤϡ�\f2inetd\fP (Solaris �ξ��)���ޤ��� \f2xinetd\fP (Linux) �������� \f2rmid\fP ��ɬ�פ˱����Ƴ��Ϥ�����ˡ�⤢��ޤ���
+.LP
+.LP
+\f2rmid\fP �򳫻Ϥ���ȡ�\f2System.inheritedChannel\fP �᥽�åɤ�ƤӽФ��ơ��Ѿ����줿�����ͥ� (\f2inetd\fP/\f2xinetd\fP ����Ѿ�) ��������褦�Ȥ��ޤ����Ѿ����줿�����ͥ뤬 \f2null\fP �Ǥ��뤫��\f2java.nio.channels.ServerSocketChannel\fP �Υ��󥹥��󥹤Ǥʤ��ä���硢\f2rmid\fP �Ϥ��Υ����ͥ�� \f2inetd\fP/\f2xinetd\fP �ˤ�äƵ�ư���줿��ΤǤϤʤ���Ƚ�Ǥ������ҤΤ褦�˵�ư���ޤ���
+.LP
+.LP
+�Ѿ����줿�����ͥ뤬 \f2ServerSocketChannel\fP ���󥹥��󥹤Ǥ�����ϡ��������ݡ��Ȥ����⡼�ȥ��֥������ȡ��Ĥޤ� \f2java.rmi.activation.ActivationSystem\fP ���Х���ɤ���Ƥ���쥸���ȥ�� \f2java.rmi.activation.Activator\fP ��⡼�ȥ��֥������Ȥ��Ф����׵��������륵���С������åȤȤ��ơ�\f2ServerSocketChannel\fP ����������� \f2java.net.ServerSocket\fP �� \f2rmid\fP �Ǥϻ��Ѥ��ޤ������Υ⡼�ɤǤϡ�\f2rmid\fP ��ư��ϡ����Τ��Ȥ�����ơ� ���ޥ�ɹԤ��鵯ư��������Ʊ���Ǥ���
+.LP
+.RS 3
+.TP 2
+o
+\f2System.err\fP ���Ф�����Ϥϡ��ե�����˥�����쥯�Ȥ���롣���Υե������ \f2java.io.tmpdir\fP �����ƥ�ץ��ѥƥ����ǻ��ꤵ���ǥ��쥯�ȥ� (�̾�� \f2/var/tmp\fP �ޤ��� \f2/tmp\fP) �ˤ��롣 �ե�����̾����Ƭ���� \f2rmid\-err\fP �ǡ��������� \f2"tmp"\fP �Ǥ��� 
+.TP 2
+o
+\f2\-port\fP ���ץ����ϵ��ݤ���롣���Υ��ץ�������ꤹ��ȡ�\f2rmid\fP �ϥ��顼��å�������Ф��ƽ�λ���� 
+.TP 2
+o
+\f2\-log\fP ���ץ�����ɬ�ܡ����Υ��ץ�������ꤷ�ʤ��ȡ�\f2rmid\fP �ϥ��顼��å�������Ф��ƽ�λ���� 
+.RE
+
+.LP
+.LP
+ɬ�פ˱����ƥ����ӥ��򳫻Ϥ���褦�����ꤹ��ܺ٤ˤĤ��Ƥϡ�\f2inetd\fP (Solaris) �ޤ��� \f2xinetd\fP (Linux) �Υޥ˥奢��ڡ����򻲾Ȥ��Ƥ���������
+.LP
+.SH "���ץ����"
+.LP
+
+.LP
+.RS 3
+.TP 3
+\-C<someCommandLineOption> 
+\f2rmid\fP �λҥץ����� (��ư���롼��) ���������줿�Ȥ��ˡ����줾��λҥץ������˥��ޥ�ɹ԰����Ȥ����Ϥ���륪�ץ�������ꤷ�ޤ������Ȥ��С����Τ褦�˻��ꤹ��ȡ���ư�����ƥ�ǡ��� ��ˤ�ä����������Ʋ��ۥޥ���˥ץ��ѥƥ������Ϥ����Ȥ��Ǥ��ޤ��� 
+.nf
+\f3
+.fl
+    rmid \-C\-Dsome.property=value
+.fl
+\fP
+.fi
+���ޥ�ɹ԰�����ҥץ��������Ϥ���ǽ�ϡ��ǥХå���Ԥ����������Ǥ������Ȥ��С����Τ褦�ʥ��ޥ�ɤ�¹ԤǤ��ޤ��� 
+.nf
+\f3
+.fl
+    rmid \-C\-Djava.rmi.server.logCalls=true
+.fl
+\fP
+.fi
+���Υ��ޥ�ɤˤ�ꡢ���٤Ƥλ� VM �ǥ����С��ƤӽФ��Υ��������������褦�ˤʤ�ޤ��� 
+.LP
+.TP 3
+\-J<someCommandLineOption> 
+\f2rmid\fP ��¹Ԥ��Ƥ��� \f2java\fP ���󥿥ץ꥿���Ϥ����ץ�������ꤷ�ޤ������Ȥ��С�\f2rmid\fP �� \f2rmid.policy\fP �Ȥ���̾���Υݥꥷ���ե��������Ѥ���褦�˻��ꤹ��ˤϡ�\f2rmid\fP �Υ��ޥ�ɹԤ� \f2\-J\fP ���ץ�����Ȥäơ�\f2java.security.policy\fP �ץ��ѥƥ�����������ޤ��� ������򼨤��ޤ��� 
+.nf
+\f3
+.fl
+    rmid \-J\-Djava.security.policy=rmid.policy
+.fl
+\fP
+.fi
+.TP 3
+\-J\-Dsun.rmi.activation.execPolicy=<policy> 
+��ư���롼�פ��¹Ԥ���뤳�Ȥˤʤ� VM �ε�ư�˻��Ѥ��륳�ޥ�ɤ���ӥ��ޥ�ɹԥ��ץ���������å����뤿��ˡ�\f2rmid\fP �����Ѥ���ݥꥷ������ꤷ�ޤ������Υ��ץ����ϡ�Java RMI ��ư�ǡ����� Sun �μ���������¸�ߤ��뤳�Ȥ����դ��Ƥ������������ޥ�ɹԤˤ��Υץ��ѥƥ�������ꤷ�ʤ���硢��̤� \f2\-J\-Dsun.rmi.activation.execPolicy=default\fP ����ꤷ������Ʊ���ˤʤ�ޤ���\f2<policy>\fP �˻����ǽ���ͤϡ�\f2default\fP��\f2<policyClassName>\fP���ޤ��� \f2none\fP �Ǥ��� ���줾����ͤˤĤ��ơ����Τ����������ޤ��� 
+.LP
+.RS 3
+.TP 2
+o
+\f3default (�ޤ��ϡ����Υץ��ѥƥ������ֻ��ꤵ��Ƥ��ʤ��׾��)\fP 
+.LP
+�ǥե���Ȥ� \f2execPolicy\fP �ξ�硢\f2rmid\fP ���¹ԤǤ���Τϡ�\f2rmid\fP �����Ѥ��� �������ƥ����ݥꥷ���ե��������ǡ��¹Ԥ��븢�¤� \f2rmid\fP ��Ϳ�����Ƥ��륳�ޥ�ɤ���ӥ��ޥ�ɹԥ��ץ��������Ǥ����֥ǥե���ȡפμ¹ԥݥꥷ���ǻ��ѤǤ���Τϡ��ǥե���Ȥε�ư���롼�׼��������Ǥ��� 
+.LP
+\f2rmid\fP �ϡ���ư���롼���Ѥ� VM ��ư����Ȥ��ˡ����Υ��롼�פˤĤ�����Ͽ���줿��ư���롼�׵��һҤǤ��� \f2ActivationGroupDesc\fP ��ξ������Ѥ��ޤ������롼�׵��һҤϡ�\f2ActivationGroupDesc.CommandEnvironment\fP ����ꤷ�ޤ� (��ά��ǽ)�� ����ˤϡ���ư���롼�פ򳫻Ϥ���֥��ޥ�ɡפȡ����Υ��ޥ�ɹԤ��ɲäǤ��륳�ޥ�ɹԡ֥��ץ����פ��ޤޤ�Ƥ��ޤ����ǥե���ȤǤϡ�\f2rmid\fP �ϡ�\f2java.home\fP �ˤ��� \f2java\fP ���ޥ�ɤ���Ѥ��ޤ������롼�׵��һҤˤϡ����ץ����Ȥ��ƥ��ޥ�ɹԤ��ɲä����֥ץ��ѥƥ����ץ����С��饤�ɤ�ޤޤ�Ƥ��ޤ��� ���Υץ��ѥƥ����ϡ����Τ褦��������ޤ��� 
+.nf
+\f3
+.fl
+    \-D\fP\f4<property>\fP\f3=\fP\f4<value>\fP\f3
+.fl
+\fP
+.fi
+.LP
+���������� \f2com.sun.rmi.rmid.ExecPermission\fP ����Ѥ���ȡ����롼�׵��һҤ� \f2CommandEnvironment\fP �ǻ��ꤵ�줿���ޥ�ɤ�¹Ԥ��Ƶ�ư���롼�פ򳫻Ϥ��븢�¤�\f2rmid\fP ���Ф��Ƶ��Ĥ��뤳�Ȥ��Ǥ��ޤ������������� \f2com.sun.rmi.rmid.ExecOptionPermission\fP ����Ѥ���ȡ����롼�׵��һҤǥץ��ѥƥ��������С��饤�ɤȤ��ƻ��ꤵ�줿���ޥ�ɹԥ��ץ���󡢤ޤ��� \f2CommandEnvironment\fP �ǥ��ץ����Ȥ��ƻ��ꤵ�줿���ޥ�ɹԥ��ץ����򡢵�ư���롼�פ򳫻Ϥ���Ȥ��� \f2rmid\fP �����ѤǤ���褦�ˤʤ�ޤ��� 
+.LP
+\f2rmid\fP �ˤ��ޤ��ޤʥ��ޥ�ɤ���ӥ��ץ�����¹Ԥ��븢�¤���Ĥ�����ϡ����������� \f2ExecPermission\fP ����� \f2ExecOptionPermission\fP ������Ū�˵��Ĥ���ɬ�פ�����ޤ��� �Ĥޤꡢ���٤ƤΥ����ɥ��������Ф��Ƶ��Ĥ��ޤ��� 
+.RS 3
+.TP 3
+ExecPermission 
+\f2ExecPermission\fP ���饹�ϡ���ư���롼�פ򳫻Ϥ��뤿��� \f2rmid\fP ������Ρ֥��ޥ�ɡפ�¹Ԥ��븢�¤�ɽ���ޤ��� 
+.LP
+\f3��ʸ\fP
+.br
+\f2ExecPermission\fP �Ρ�̾���פϡ�\f2rmid\fP �˼¹Ԥ���Ĥ��륳�ޥ�ɤΥѥ�̾�Ǥ�����/*�� (��/�פϥե�������ڤ�ʸ�� \f2File.separatorChar\fP) �ǽ����ѥ�̾�ϡ����Υǥ��쥯�ȥ�˴ޤޤ�뤹�٤ƤΥե�����򼨤��ޤ�����/\-�פǽ����ѥ�̾�ϡ����Υǥ��쥯�ȥ�˴ޤޤ�뤹�٤ƤΥե�����ȥ��֥ǥ��쥯�ȥ� (�Ƶ�Ū��) �򼨤��ޤ����ѥ�̾�����̤ʥȡ������<<ALL FILES>>�פ���ꤷ�����ϡ�\f3Ǥ�դ�\fP�ե�����򼨤��ޤ��� 
+.LP
+\f3��:\fP��*�פ� 1 �Ļ��ꤷ�������Υѥ�̾�ϡ����ߤΥǥ��쥯�ȥ���Τ��٤ƤΥե������ɽ���ޤ��� �ޤ�����\-�פ� 1 �Ļ��ꤷ�������Υѥ�̾�ϡ����ߤΥǥ��쥯�ȥ���Τ��٤ƤΥե�����ȡ����ߤΥǥ��쥯�ȥ�˴ޤޤ�뤹�٤ƤΥե�����ȥ��֥ǥ��쥯�ȥ� (�Ƶ�Ū��) ��ɽ���ޤ���  
+.TP 3
+ExecOptionPermission 
+\f2ExecOptionPermission\fP ���饹�ϡ���ư���롼�פ򳫻Ϥ���Ȥ��� \f2rmid\fP ������Υ��ޥ�ɹԡ֥��ץ����פ���ѤǤ��븢�¤�ɽ���ޤ���\f2ExecOptionPermission\fP �Ρ�̾���פϡ����ޥ�ɹԥ��ץ������ͤǤ��� 
+.LP
+\f3��ʸ\fP
+.br
+���ץ����Ǥϡ��磻��ɥ����ɤ�����Ū�˥��ݡ��Ȥ���ޤ����������ꥹ���ϡ��磻��ɥ����ɥޥå���ɽ���ޤ��� �������ꥹ���ϡ����ץ����̾���Τ�ΤȤ��ƻ��ѤǤ��ޤ��� �ĤޤꡢǤ�դΥ��ץ�����ɽ�����Ȥ��Ǥ��ޤ��� �ޤ������ץ����̾�������˻��Ѥ��뤳�Ȥ�Ǥ��ޤ��� ����������.�פ���=�פ�ľ��˥������ꥹ������ꤹ��ɬ�פ�����ޤ��� 
+.LP
+��򼨤��ޤ�����*�ס���\-Dfoo.*�ס���\-Da.b.c=*�פ�ͭ���Ǥ�������*foo�ס���\-Da*b�ס���ab*�פ�̵���Ǥ���  
+.TP 3
+rmid �Υݥꥷ���ե����� 
+\f2rmid\fP �ˤ��ޤ��ޤʥ��ޥ�ɤ���ӥ��ץ�����¹Ԥ��븢�¤���Ĥ�����ϡ����������� \f2ExecPermission\fP ����� \f2ExecOptionPermission\fP ������Ū�˵��Ĥ���ɬ�פ�����ޤ��� �Ĥޤꡢ���٤ƤΥ����ɥ��������Ф��Ƶ��Ĥ��ޤ��������Υ���������������å�����Τ� \f2rmid\fP �����ʤΤǡ������Υ���������������Ū�˵��Ĥ��Ƥ�����Ǥ��� 
+.LP
+\f2rmid\fP �˳Ƽ�μ¹Ը��¤���Ĥ���ݥꥷ���ե��������򡢼��˼����ޤ��� 
+.nf
+\f3
+.fl
+grant {
+.fl
+    permission com.sun.rmi.rmid.ExecPermission
+.fl
+        "/files/apps/java/jdk1.2.2/solaris/bin/java";
+.fl
+
+.fl
+    permission com.sun.rmi.rmid.ExecPermission
+.fl
+        "/files/apps/java/jdk1.2.2/solaris/bin/java_g";
+.fl
+
+.fl
+    permission com.sun.rmi.rmid.ExecPermission
+.fl
+        "/files/apps/rmidcmds/*";
+.fl
+
+.fl
+    permission com.sun.rmi.rmid.ExecOptionPermission
+.fl
+        "\-Djava.security.policy=/files/policies/group.policy";
+.fl
+
+.fl
+    permission com.sun.rmi.rmid.ExecOptionPermission
+.fl
+        "\-Djava.security.debug=*";
+.fl
+
+.fl
+    permission com.sun.rmi.rmid.ExecOptionPermission
+.fl
+        "\-Dsun.rmi.*";
+.fl
+};
+.fl
+\fP
+.fi
+�ǽ�� 2 �Ĥ���Ϳ����Ƥ��륢���������ϡ�\f2rmid\fP ���Ф����ѥ�̾�ˤ������Ū�˻��ꤵ��� \f2java\fP ���ޥ�ɤ���� \f2java_g\fP ���ޥ�ɤ� 1.2.2 �С������μ¹Ԥ���Ĥ��ޤ����ǥե���ȤǤϡ�\f2java.home\fP �ˤ���С������� \f2java\fP ���ޥ�� (\f2rmid\fP �����Ѥ���Τ�Ʊ���С������) �����Ѥ���뤿�ᡢ���Υ��ޥ�ɤϡ��ݥꥷ���ե�����ǻ��ꤹ��ɬ�פϤ���ޤ���3 ���ܤΥ����������ϡ�\f2rmid\fP ���Ф��ơ��ǥ��쥯�ȥ� \f2/files/apps/rmidcmds\fP ���Ǥ�դΥ��ޥ�ɤμ¹Ը��¤���Ĥ��ޤ��� 
+.LP
+4 ���ܤΥ��������� \f2ExecOptionPermission\fP �ϡ�\f2rmid\fP ���Ф��ơ��������ƥ����ݥꥷ���ե������ \f2/files/policies/group.policy\fP �Ȥ���������Ƥ��뵯ư���롼�פγ��Ϥ���Ĥ��ޤ���5 ���ܤΥ����������ϡ���ư���롼�פ� \f2java.security.debug\fP �ץ��ѥƥ�������Ѥ��뤳�Ȥ���Ĥ��Ƥ��ޤ����Ǹ�Υ����������ϡ���ư���롼�פ� \f2sun.rmi\fP �Ȥ����ץ��ѥƥ���̾�γ������Ǥ�դΥץ��ѥƥ�������Ѥ��뤳�Ȥ���Ĥ��Ƥ��ޤ��� 
+.LP
+�ݥꥷ���ե��������ꤷ�� \f2rmid\fP ��ư����ˤϡ�\f2rmid\fP �Υ��ޥ�ɹԤ� \f2java.security.policy\fP �ץ��ѥƥ�������ꤹ��ɬ�פ�����ޤ��� ������򼨤��ޤ��� 
+.RS 3
+
+.LP
+.LP
+\f2rmid \-J\-Djava.security.policy=rmid.policy\fP
+.LP
+.RE
+.RE
+.TP 2
+o
+.LP
+.TP 2
+o
+\f4<policyClassName>\fP 
+.LP
+�ǥե���Ȥ�ư��ǤϽ�ʬ�ʽ������������ʤ���硢�����Ԥϡ�\f2rmid\fP �ε�ư���ˡ�\f2checkExecCommand\fP �᥽�åɤ���°���륯�饹��̾������ꤷ�ơ�rmid ���¹Ԥ��륳�ޥ�ɤ�����å����뤳�Ȥ��Ǥ��ޤ��� 
+.LP
+\f2policyClassName\fP �ˤϡ������ʤ��Υ��󥹥ȥ饯������������Τ褦�� \f2checkExecCommand\fP �᥽�åɤ�������Ƥ��� public ���饹����ꤷ�ޤ��� 
+.nf
+\f3
+.fl
+    public void checkExecCommand(ActivationGroupDesc desc,
+.fl
+                                 String[] command)
+.fl
+        throws SecurityException;
+.fl
+\fP
+.fi
+��ư���롼�פ򳫻Ϥ������ˡ�\f2rmid\fP �ϡ��ݥꥷ���� \f2checkExecCommand\fP �᥽�åɤ�ƤӽФ��ޤ������ΤȤ�����ư���롼�פε��һҤȡ���ư���롼�פ򳫻Ϥ��뤿��δ����ʥ��ޥ�ɤ�ޤ�����򤽤Υ᥽�åɤ��Ϥ��ޤ���\f2checkExecCommand\fP �� \f2SecurityException\fP �򥹥�������ȡ�\f2rmid\fP �Ϥ��ε�ư���롼�פ򳫻Ϥ��������֥������Ȥε�ư���Ԥ��Ƥ���ƤӽФ�¦�ˤ� \f2ActivationException\fP ������������ޤ��� 
+.LP
+.TP 2
+o
+\f3none\fP 
+.LP
+\f2sun.rmi.activation.execPolicy\fP �ץ��ѥƥ������ͤ���none�פξ�硢\f2rmid\fP �ϡ���ư���롼�פ򳫻Ϥ��륳�ޥ�ɤ�ޤä������ڤ��ޤ���  
+.RE
+.LP
+.TP 3
+\-log dir 
+��ư�����ƥ�ǡ���󤬥ǡ����١�������Ӵ�Ϣ�����񤭹���Τ˻Ȥ��ǥ��쥯�ȥ��̾������ꤷ�ޤ����ǥե���ȤǤϡ�\f2rmid\fP ���ޥ�ɤ�¹Ԥ����ǥ��쥯�ȥ�ˡ�\f2log\fP �Ȥ��������ǥ��쥯�ȥ꤬��������ޤ��� 
+.LP
+.TP 3
+\-port port 
+\f2rmid\fP �Υ쥸���ȥ꤬�Ȥ��ݡ��Ȥ���ꤷ�ޤ�����ư�����ƥ�ǡ����ϡ����Υ쥸���ȥ����ǡ�\f2java.rmi.activation.ActivationSystem\fP �Ȥ���̾����\f2ActivationSystem\fP ��Х���ɤ��ޤ����������äơ���������ޥ����� \f2ActivationSystem\fP �ϡ����Τ褦�� \f2Naming.lookup\fP �᥽�åɤ�ƤӽФ����Ȥˤ�äƼ����Ǥ��ޤ��� 
+.nf
+\f3
+.fl
+    import java.rmi.*; 
+.fl
+    import java.rmi.activation.*;
+.fl
+
+.fl
+    ActivationSystem system; system = (ActivationSystem)
+.fl
+    Naming.lookup("//:\fP\f4port\fP/java.rmi.activation.ActivationSystem");
+.fl
+.fi
+.TP 3
+\-stop 
+\f2\-port\fP ���ץ����ˤ�äƻ��ꤵ�줿�ݡ��ȤΡ����ߤ� \f2rmid\fP �ƤӽФ�����ߤ��ޤ����ݡ��Ȥ����ꤵ��Ƥ��ʤ����ϡ��ݡ��� 1098 �Ǽ¹Ԥ���Ƥ��� \f2rmid\fP ����ߤ��ޤ��� 
+.RE
+.SH "�Ķ��ѿ�"
+.LP
+
+.LP
+.RS 3
+.TP 3
+CLASSPATH 
+�桼����������饹�ؤΥѥ��򥷥��ƥ�˻��ꤷ�ޤ����ǥ��쥯�ȥ�ϥ������ʬ�䤷�ޤ�����򼨤��ޤ��� 
+.nf
+\f3
+.fl
+    .:/data/usr/local/java/classes
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.SH "��Ϣ����"
+.LP
+
+.LP
+.LP
+rmic(1)��
+.na
+\f2CLASSPATH\fP @
+.fi
+http://java.sun.com/javase/6/docs/technotes/tools/index.html#classpath��java(1)
+.LP
+
+.LP
+ 

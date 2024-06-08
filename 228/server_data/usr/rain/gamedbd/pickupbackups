@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use strict;
+use Time::Local 'timelocal_nocheck';
+use FileHandle;
+
+	my $backup_dir = "/export/backup";
+	my $everyday_dir = "/export/everyday";
+	system("/bin/mkdir $everyday_dir")	if( not -d $everyday_dir );
+
+	my %backups;
+	my %backups_date;
+
+	pickupbackups();
+
+sub pickupbackups
+{
+	my @dirorfiles = glob( "$backup_dir/*" );
+	foreach( @dirorfiles )
+	{
+		my $time_string;
+		if( -d $_ )
+		{
+			($time_string) = $_=~m/.*\/(.+)$/g;
+		}
+		elsif( -f $_ )
+		{
+			($time_string) = $_=~m/.*\/(.+)\.tar.bz$/g;
+		}
+		else
+		{
+			next;
+		}
+
+		my $year = substr($time_string,0,4);
+		my $mon = substr($time_string,4,2);
+		my $mday = substr($time_string,6,2);
+		my $hour = substr($time_string,9,2);
+		my $min = substr($time_string,11,2);
+		my $sec = substr($time_string,13,2);
+		my $time = timelocal_nocheck($sec,$min,$hour,$mday,$mon-1,$year);
+		$backups{$_} = $time;
+		$backups_date{$_} = $year . $mon . $mday;
+	}
+
+	my @keys_sort = sort { $backups{$b} <=> $backups{$a} } keys(%backups);
+	if( @keys_sort > 1 )
+	{
+		my $pick = $keys_sort[1];
+		system( "/bin/cp -r $pick $everyday_dir/" );
+	}
+
+#	my @keys_sort = sort { $backups{$a} <=> $backups{$b} } keys(%backups);
+#	my $last = undef;
+#	foreach( @keys_sort )
+#	{
+#		my $cur = $backups_date{$_};
+#		if( not defined $last or $last ne $cur )
+#		{
+#			my $pick = $_;
+#			my $destfilename = $pick;
+#			$destfilename =~ s/backup/everyday/g;
+#			if( not -d $destfilename )
+#			{
+#				system( "/bin/cp -r $pick $everyday_dir/" );
+#			}
+#		}
+#		$last = $cur;
+#	}
+}
+
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /data/usr/rain/gamed/config/
+tee topdata.txt | ../toplist | tee titledata.txt

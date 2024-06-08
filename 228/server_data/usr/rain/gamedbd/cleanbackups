@@ -1,0 +1,122 @@
+#!/usr/bin/perl
+
+use strict;
+use Time::Local 'timelocal_nocheck';
+use FileHandle;
+
+	my $backup_dir = "/dbf/backup";
+	$backup_dir = $ARGV[0] if( @ARGV > 0 );
+	my $hold_intervals = 256;
+	$hold_intervals = $ARGV[1] if( @ARGV > 1 );
+
+	my %backups;
+
+	my $g_interval_first = 21600;	# 43200;
+	my $g_backups_per_interval = 6;	# 12;
+
+	cleanupbackups();
+
+sub cleanupbackups
+{
+	my @dirorfiles = glob( "$backup_dir/*" );
+	foreach( @dirorfiles )
+	{
+		my $time_string;
+		if( -d $_ )
+		{
+			($time_string) = $_=~m/.*\/(.+)$/g;
+		}
+		elsif( -f $_ )
+		{
+			($time_string) = $_=~m/.*\/(.+)\.tar.bz$/g;
+		}
+		else
+		{
+			next;
+		}
+
+		my $year = substr($time_string,0,4);
+		my $mon = substr($time_string,4,2);
+		my $mday = substr($time_string,6,2);
+		my $hour = substr($time_string,9,2);
+		my $min = substr($time_string,11,2);
+		my $sec = substr($time_string,13,2);
+		my $time = timelocal_nocheck($sec,$min,$hour,$mday,$mon-1,$year);
+		$backups{$_} = $time;
+	}
+
+	my @keys_sort = sort { $backups{$b} <=> $backups{$a} } keys(%backups);
+
+	my $time_latest = time;
+	$time_latest = $backups{$keys_sort[0]} if( @keys_sort > 0 );
+
+
+	my $interval = 1;
+	my $k = $interval;
+	my @keys_sub;
+	my $left_count = 0;
+	foreach( @keys_sort )
+	{
+		if( $left_count < 2 )
+		{
+			$left_count ++;
+			next;
+		}
+
+		if( $time_latest - $backups{$_} > $hold_intervals*$g_interval_first )
+		{
+			print( "removing $_, at " . scalar localtime time );
+			print( "\n" );
+			system( "rm -rf $_" );
+			next;
+		}
+
+		if( $time_latest - $backups{$_} < $k*$g_interval_first )
+		{
+			push( @keys_sub, $_ );
+		}
+		else
+		{
+			remove_redundant( \@keys_sub, $interval*$g_interval_first );
+			$interval = 2*$interval;
+			$k += $interval;
+			@keys_sub = ();
+			push( @keys_sub, $_ );
+		}
+	}
+	remove_redundant( \@keys_sub, $interval*$g_interval_first );
+}
+
+sub remove_redundant
+{
+	my ($keys_interval, $time_total) = @_;
+
+	my $time_interval = $time_total / $g_backups_per_interval;
+	$time_interval = $time_interval * 5 / 6;
+
+	return if( @$keys_interval < $g_backups_per_interval );
+	return if( $time_total == $g_interval_first );
+	my @keys_desc = sort { $backups{$b} <=> $backups{$a} } @$keys_interval;
+
+	my $count = 0;
+	my $time_cur;
+	foreach( @keys_desc )
+	{
+		if( not defined $time_cur or $time_cur - $backups{$_} >= $time_interval )
+		{
+			$time_cur = $backups{$_};
+		}
+		else
+		{
+			print( "removing $_, at " . scalar localtime time );
+			my $t = $time_cur - $backups{$_};
+			print( "\t$t\n" );
+			system( "rm -rf $_" );
+
+			$count ++;
+			return if( @$keys_interval-$count < $g_backups_per_interval );
+		}
+	}
+}
+
+

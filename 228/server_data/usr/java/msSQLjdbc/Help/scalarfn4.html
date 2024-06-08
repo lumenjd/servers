@@ -1,0 +1,179 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:39" />
+    <title>Outer Join Escape Sequences</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="29048" class="NewHTMLPage">
+  <a name="29048"> </a>Outer Join Escape Sequences
+</h2><hr />
+<p id="17387" class="Body">
+  <a name="17387"> </a>JDBC supports the SQL92 left, right, and full outer join syntax. The escape sequence for outer joins is:
+</p>
+<pre  class="Preformatted">
+{oj <code><em>outer-join</em></code>}<a name="17388"> </a>
+</pre>
+<p id="17389" class="Body">
+  <a name="17389"> </a>where <em>outer-join</em> is:
+</p>
+<pre  class="Preformatted">
+<em>table-reference</em> {LEFT | RIGHT | FULL} OUTER JOIN <a name="17390"> </a>
+{<code><em>table-reference</em></code> | outer-join} ON <code><em>search-condition</em></code><a name="27036"> </a>
+</pre>
+<p id="17391" class="Body">
+  <a name="17391"> </a>where:
+</p>
+<p id="27037" class="Body">
+  <a name="27037"> </a><em>table-reference</em> is a table name.
+</p>
+<p id="27038" class="Body">
+  <a name="27038"> </a><em>search-condition</em> is the join condition you want to use for the tables.
+</p>
+<h5 id="17392" class="Heading4">
+  <a name="17392"> </a>Example:
+</h5>
+<pre  class="Preformatted">
+SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status<a name="17393"> </a>
+  FROM {oj Customers LEFT OUTER JOIN<a name="17394"> </a>
+        Orders ON Customers.CustID=Orders.CustID}<a name="26827"> </a>
+  WHERE Orders.Status=&#39;OPEN&#39;<a name="17395"> </a>
+</pre>
+<p id="24640" class="Body">
+  <a name="24640"> </a><a href="scalarfn4.html#24644">Table D-2</a> lists the outer join escape sequences supported by the Microsoft SQL Server 2000 Driver for JDBC.
+</p>
+<p id="24672" class="Body">
+  <a name="24672"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption><a name="24644"> </a><div id="24644" class="TableTitle">Table D-2.  Outer Join Escape Sequences Supported </div></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><a name="24651"> </a><div id="24651" class="CellHeading">Data Store</div></th>
+    <th><a name="24653"> </a><div id="24653" class="CellHeading">Outer Join Escape Sequences</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="24659"> </a><div id="24659" class="CellBody">SQL Server 2000</div></td>
+    <td bgcolor="#E6E6E6"><a name="24661"> </a><div id="24661" class="CellBody">Left outer joins<br />Right outer joins<br />Full outer joins<br />Nested outer joins</div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p></p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="scalarfn3.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="scalarfn5.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

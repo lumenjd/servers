@@ -1,0 +1,42 @@
+#!/bin/sh
+echo "=========================================="
+echo "Booting!"
+
+cd /data/root/myauthd/build
+./authd & 
+echo "authd"
+sleep 1
+
+cd /data/usr/rain/gacd
+./gacd io.conf &
+echo "a"
+sleep 1
+
+cd /data/usr/rain/gdeliveryd
+./gdeliveryd gamesys.conf &
+echo "c"
+sleep 1
+
+cd /data/usr/rain/glinkd
+./glinkd gamesys.conf 1 &
+echo "d"
+sleep 1
+
+cd /data/usr/rain/gamedbd
+./gamedbd gamesys.conf &
+echo "e"
+sleep 1
+
+cd /data/usr/rain/uniquenamed
+./uniquenamed gamesys.conf  &
+echo "f"
+sleep 1
+
+cd /data/usr/rain/gamed
+./gs gs.conf gmserver.conf gsalias.conf  & 
+sleep 1
+
+echo "Done booting!"
+echo "=========================================="
+
+

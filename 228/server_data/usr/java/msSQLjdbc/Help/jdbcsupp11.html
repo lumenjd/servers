@@ -1,0 +1,922 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:58" />
+    <title>jdbcsupp11.html</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="544827" class="NewHTMLPage">
+  <a name="544827"> </a>
+</h2><hr />
+<p id="542942" class="Body">
+  <a name="542942"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><h4 id="548936" class="Heading3">
+  <a name="548936"> </a>ResultSet Object  
+</h4>
+<a name="548941"> </a><div id="548941" class="CellHeading">Methods</div></th>
+    <th><a name="548944"> </a><div id="548944" class="CellHeading">Version</div><a name="548945"> </a><div id="548945" class="CellHeading">Introduced</div></th>
+    <th><a name="548948"> </a><div id="548948" class="CellHeading"><br /></div><a name="548949"> </a><div id="548949" class="CellHeading">Supported</div></th>
+    <th><a name="548952"> </a><div id="548952" class="CellHeading"><br /></div><a name="548953"> </a><div id="548953" class="CellHeading">Comments</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548955"> </a><div id="548955" class="CellBody">boolean absolute (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="548957"> </a><div id="548957" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="548959"> </a><div id="548959" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="548961"> </a><div id="548961" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548963"> </a><div id="548963" class="CellBody">void afterLast () </div></td>
+    <td bgcolor="#E6E6E6"><a name="548965"> </a><div id="548965" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="548967"> </a><div id="548967" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="548969"> </a><div id="548969" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548971"> </a><div id="548971" class="CellBody">void beforeFirst () </div></td>
+    <td bgcolor="#E6E6E6"><a name="548973"> </a><div id="548973" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="548975"> </a><div id="548975" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="548977"> </a><div id="548977" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548979"> </a><div id="548979" class="CellBody">void cancelRowUpdates () </div></td>
+    <td bgcolor="#E6E6E6"><a name="548981"> </a><div id="548981" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="548983"> </a><div id="548983" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="548985"> </a><div id="548985" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548987"> </a><div id="548987" class="CellBody">void clearWarnings () </div></td>
+    <td bgcolor="#E6E6E6"><a name="548989"> </a><div id="548989" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="548991"> </a><div id="548991" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="548993"> </a><div id="548993" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="548995"> </a><div id="548995" class="CellBody">void close () </div></td>
+    <td bgcolor="#E6E6E6"><a name="548997"> </a><div id="548997" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="548999"> </a><div id="548999" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549001"> </a><div id="549001" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549003"> </a><div id="549003" class="CellBody">void deleteRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549005"> </a><div id="549005" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549007"> </a><div id="549007" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549009"> </a><div id="549009" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549011"> </a><div id="549011" class="CellBody">int findColumn (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549013"> </a><div id="549013" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549015"> </a><div id="549015" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549017"> </a><div id="549017" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549019"> </a><div id="549019" class="CellBody">boolean first () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549021"> </a><div id="549021" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549023"> </a><div id="549023" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549025"> </a><div id="549025" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549027"> </a><div id="549027" class="CellBody">Array getArray (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549029"> </a><div id="549029" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549031"> </a><div id="549031" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549033"> </a><div id="549033" class="CellBody">Throws "unsupported method" exception.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549035"> </a><div id="549035" class="CellBody">Array getArray (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549037"> </a><div id="549037" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549039"> </a><div id="549039" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549041"> </a><div id="549041" class="CellBody">Throws "unsupported method" exception.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549043"> </a><div id="549043" class="CellBody">InputStream getAsciiStream (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549045"> </a><div id="549045" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549047"> </a><div id="549047" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549049"> </a><div id="549049" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549051"> </a><div id="549051" class="CellBody">InputStream getAsciiStream (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549053"> </a><div id="549053" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549055"> </a><div id="549055" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549057"> </a><div id="549057" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549059"> </a><div id="549059" class="CellBody">BigDecimal getBigDecimal (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549061"> </a><div id="549061" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549063"> </a><div id="549063" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549065"> </a><div id="549065" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549067"> </a><div id="549067" class="CellBody">BigDecimal getBigDecimal (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549069"> </a><div id="549069" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549071"> </a><div id="549071" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549073"> </a><div id="549073" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549075"> </a><div id="549075" class="CellBody">BigDecimal getBigDecimal (String, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549077"> </a><div id="549077" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549079"> </a><div id="549079" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549081"> </a><div id="549081" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549083"> </a><div id="549083" class="CellBody">BigDecimal getBigDecimal (int, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549085"> </a><div id="549085" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549087"> </a><div id="549087" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549089"> </a><div id="549089" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549091"> </a><div id="549091" class="CellBody">InputStream getBinaryStream (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549093"> </a><div id="549093" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549095"> </a><div id="549095" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549097"> </a><div id="549097" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549099"> </a><div id="549099" class="CellBody">InputStream getBinaryStream (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549101"> </a><div id="549101" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549103"> </a><div id="549103" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549105"> </a><div id="549105" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549107"> </a><div id="549107" class="CellBody">Blob getBlob (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549109"> </a><div id="549109" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549111"> </a><div id="549111" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549113"> </a><div id="549113" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549115"> </a><div id="549115" class="CellBody">Blob getBlob (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549117"> </a><div id="549117" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549119"> </a><div id="549119" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549121"> </a><div id="549121" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549123"> </a><div id="549123" class="CellBody">boolean getBoolean (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549125"> </a><div id="549125" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549127"> </a><div id="549127" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549129"> </a><div id="549129" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549131"> </a><div id="549131" class="CellBody">boolean getBoolean (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549133"> </a><div id="549133" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549135"> </a><div id="549135" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549137"> </a><div id="549137" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549139"> </a><div id="549139" class="CellBody">byte getByte (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549141"> </a><div id="549141" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549143"> </a><div id="549143" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549145"> </a><div id="549145" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549147"> </a><div id="549147" class="CellBody">byte getByte (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549149"> </a><div id="549149" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549151"> </a><div id="549151" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549153"> </a><div id="549153" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549155"> </a><div id="549155" class="CellBody">byte [] getBytes (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549157"> </a><div id="549157" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549159"> </a><div id="549159" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549161"> </a><div id="549161" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549163"> </a><div id="549163" class="CellBody">byte [] getBytes (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549165"> </a><div id="549165" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549167"> </a><div id="549167" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549169"> </a><div id="549169" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549171"> </a><div id="549171" class="CellBody">Reader getCharacterStream (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549173"> </a><div id="549173" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549175"> </a><div id="549175" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549177"> </a><div id="549177" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549179"> </a><div id="549179" class="CellBody">Reader getCharacterStream (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549181"> </a><div id="549181" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549183"> </a><div id="549183" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549185"> </a><div id="549185" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549187"> </a><div id="549187" class="CellBody">Clob getClob (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549189"> </a><div id="549189" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549191"> </a><div id="549191" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549193"> </a><div id="549193" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549195"> </a><div id="549195" class="CellBody">Clob getClob (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549197"> </a><div id="549197" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549199"> </a><div id="549199" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549201"> </a><div id="549201" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549203"> </a><div id="549203" class="CellBody">int getConcurrency () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549205"> </a><div id="549205" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549207"> </a><div id="549207" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549209"> </a><div id="549209" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549211"> </a><div id="549211" class="CellBody">String getCursorName () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549213"> </a><div id="549213" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549215"> </a><div id="549215" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549217"> </a><div id="549217" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549219"> </a><div id="549219" class="CellBody">Date getDate (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549221"> </a><div id="549221" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549223"> </a><div id="549223" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549225"> </a><div id="549225" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549227"> </a><div id="549227" class="CellBody">Date getDate (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549229"> </a><div id="549229" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549231"> </a><div id="549231" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549233"> </a><div id="549233" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549235"> </a><div id="549235" class="CellBody">Date getDate (String, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549237"> </a><div id="549237" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549239"> </a><div id="549239" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549241"> </a><div id="549241" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549243"> </a><div id="549243" class="CellBody">Date getDate (int, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549245"> </a><div id="549245" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549247"> </a><div id="549247" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549249"> </a><div id="549249" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549251"> </a><div id="549251" class="CellBody">double getDouble (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549253"> </a><div id="549253" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549255"> </a><div id="549255" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549257"> </a><div id="549257" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549259"> </a><div id="549259" class="CellBody">double getDouble (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549261"> </a><div id="549261" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549263"> </a><div id="549263" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549265"> </a><div id="549265" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549267"> </a><div id="549267" class="CellBody">int getFetchDirection () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549269"> </a><div id="549269" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549271"> </a><div id="549271" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549273"> </a><div id="549273" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549275"> </a><div id="549275" class="CellBody">int getFetchSize () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549277"> </a><div id="549277" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549279"> </a><div id="549279" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549281"> </a><div id="549281" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549283"> </a><div id="549283" class="CellBody">float getFloat (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549285"> </a><div id="549285" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549287"> </a><div id="549287" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549289"> </a><div id="549289" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549291"> </a><div id="549291" class="CellBody">float getFloat (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549293"> </a><div id="549293" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549295"> </a><div id="549295" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549297"> </a><div id="549297" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549299"> </a><div id="549299" class="CellBody">int getInt (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549301"> </a><div id="549301" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549303"> </a><div id="549303" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549305"> </a><div id="549305" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549307"> </a><div id="549307" class="CellBody">int getInt (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549309"> </a><div id="549309" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549311"> </a><div id="549311" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549313"> </a><div id="549313" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549315"> </a><div id="549315" class="CellBody">long getLong (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549317"> </a><div id="549317" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549319"> </a><div id="549319" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549321"> </a><div id="549321" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549323"> </a><div id="549323" class="CellBody">long getLong (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549325"> </a><div id="549325" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549327"> </a><div id="549327" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549329"> </a><div id="549329" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549331"> </a><div id="549331" class="CellBody">ResultSetMetaData getMetaData () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549333"> </a><div id="549333" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549335"> </a><div id="549335" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549337"> </a><div id="549337" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549339"> </a><div id="549339" class="CellBody">Object getObject (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549341"> </a><div id="549341" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549343"> </a><div id="549343" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549345"> </a><div id="549345" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549347"> </a><div id="549347" class="CellBody">Object getObject (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549349"> </a><div id="549349" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549351"> </a><div id="549351" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549353"> </a><div id="549353" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549355"> </a><div id="549355" class="CellBody">Object getObject (int, Map) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549357"> </a><div id="549357" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549359"> </a><div id="549359" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549361"> </a><div id="549361" class="CellBody">Map ignored. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549363"> </a><div id="549363" class="CellBody">Object getObject (String, Map) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549365"> </a><div id="549365" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549367"> </a><div id="549367" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549369"> </a><div id="549369" class="CellBody">Map ignored.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549371"> </a><div id="549371" class="CellBody">Ref getRef (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549373"> </a><div id="549373" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549375"> </a><div id="549375" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549377"> </a><div id="549377" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549379"> </a><div id="549379" class="CellBody">Ref getRef (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549381"> </a><div id="549381" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549383"> </a><div id="549383" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549385"> </a><div id="549385" class="CellBody">Throws "unsupported method" exception. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549387"> </a><div id="549387" class="CellBody">int getRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549389"> </a><div id="549389" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549391"> </a><div id="549391" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549393"> </a><div id="549393" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549395"> </a><div id="549395" class="CellBody">short getShort (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549397"> </a><div id="549397" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549399"> </a><div id="549399" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549401"> </a><div id="549401" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549403"> </a><div id="549403" class="CellBody">short getShort (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549405"> </a><div id="549405" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549407"> </a><div id="549407" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549409"> </a><div id="549409" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549411"> </a><div id="549411" class="CellBody">Statement getStatement () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549413"> </a><div id="549413" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549415"> </a><div id="549415" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549417"> </a><div id="549417" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549419"> </a><div id="549419" class="CellBody">String getString (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549421"> </a><div id="549421" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549423"> </a><div id="549423" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549425"> </a><div id="549425" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549427"> </a><div id="549427" class="CellBody">String getString (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549429"> </a><div id="549429" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549431"> </a><div id="549431" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549433"> </a><div id="549433" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549435"> </a><div id="549435" class="CellBody">Time getTime (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549437"> </a><div id="549437" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549439"> </a><div id="549439" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549441"> </a><div id="549441" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549443"> </a><div id="549443" class="CellBody">Time getTime (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549445"> </a><div id="549445" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549447"> </a><div id="549447" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549449"> </a><div id="549449" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549451"> </a><div id="549451" class="CellBody">Time getTime (String, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549453"> </a><div id="549453" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549455"> </a><div id="549455" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549457"> </a><div id="549457" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549459"> </a><div id="549459" class="CellBody">Time getTime (int, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549461"> </a><div id="549461" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549463"> </a><div id="549463" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549465"> </a><div id="549465" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549467"> </a><div id="549467" class="CellBody">Timestamp getTimestamp (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549469"> </a><div id="549469" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549471"> </a><div id="549471" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549473"> </a><div id="549473" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549475"> </a><div id="549475" class="CellBody">Timestamp getTimestamp (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549477"> </a><div id="549477" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549479"> </a><div id="549479" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549481"> </a><div id="549481" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549483"> </a><div id="549483" class="CellBody">Timestamp getTimestamp (String, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549485"> </a><div id="549485" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549487"> </a><div id="549487" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549489"> </a><div id="549489" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549491"> </a><div id="549491" class="CellBody">Timestamp getTimestamp (int, Calendar) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549493"> </a><div id="549493" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549495"> </a><div id="549495" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549497"> </a><div id="549497" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549499"> </a><div id="549499" class="CellBody">int getType () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549501"> </a><div id="549501" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549503"> </a><div id="549503" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549505"> </a><div id="549505" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549507"> </a><div id="549507" class="CellBody">InputStream getUnicodeStream (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549509"> </a><div id="549509" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549511"> </a><div id="549511" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549513"> </a><div id="549513" class="CellBody">Throws "unsupported method" exception.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549515"> </a><div id="549515" class="CellBody">InputStream getUnicodeStream (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549517"> </a><div id="549517" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549519"> </a><div id="549519" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="549521"> </a><div id="549521" class="CellBody">Throws "unsupported method" exception.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549523"> </a><div id="549523" class="CellBody">SQLWarning getWarnings () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549525"> </a><div id="549525" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549527"> </a><div id="549527" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549529"> </a><div id="549529" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549531"> </a><div id="549531" class="CellBody">void insertRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549533"> </a><div id="549533" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549535"> </a><div id="549535" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549537"> </a><div id="549537" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549539"> </a><div id="549539" class="CellBody">boolean isAfterLast () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549541"> </a><div id="549541" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549543"> </a><div id="549543" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549545"> </a><div id="549545" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549547"> </a><div id="549547" class="CellBody">boolean isBeforeFirst () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549549"> </a><div id="549549" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549551"> </a><div id="549551" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549553"> </a><div id="549553" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549555"> </a><div id="549555" class="CellBody">boolean isFirst () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549557"> </a><div id="549557" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549559"> </a><div id="549559" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549561"> </a><div id="549561" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549563"> </a><div id="549563" class="CellBody">boolean isLast () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549565"> </a><div id="549565" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549567"> </a><div id="549567" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549569"> </a><div id="549569" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549571"> </a><div id="549571" class="CellBody">boolean last () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549573"> </a><div id="549573" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549575"> </a><div id="549575" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549577"> </a><div id="549577" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549579"> </a><div id="549579" class="CellBody">void moveToCurrentRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549581"> </a><div id="549581" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549583"> </a><div id="549583" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549585"> </a><div id="549585" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549587"> </a><div id="549587" class="CellBody">void moveToInsertRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549589"> </a><div id="549589" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549591"> </a><div id="549591" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549593"> </a><div id="549593" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549595"> </a><div id="549595" class="CellBody">boolean next () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549597"> </a><div id="549597" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549599"> </a><div id="549599" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549601"> </a><div id="549601" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549603"> </a><div id="549603" class="CellBody">boolean previous () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549605"> </a><div id="549605" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549607"> </a><div id="549607" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549609"> </a><div id="549609" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549611"> </a><div id="549611" class="CellBody">void refreshRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549613"> </a><div id="549613" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549615"> </a><div id="549615" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549617"> </a><div id="549617" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549619"> </a><div id="549619" class="CellBody">boolean relative (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549621"> </a><div id="549621" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549623"> </a><div id="549623" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549625"> </a><div id="549625" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549627"> </a><div id="549627" class="CellBody">boolean rowDeleted () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549629"> </a><div id="549629" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549631"> </a><div id="549631" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549633"> </a><div id="549633" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549635"> </a><div id="549635" class="CellBody">boolean rowInserted () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549637"> </a><div id="549637" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549639"> </a><div id="549639" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549641"> </a><div id="549641" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549643"> </a><div id="549643" class="CellBody">boolean rowUpdated () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549645"> </a><div id="549645" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549647"> </a><div id="549647" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549649"> </a><div id="549649" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549651"> </a><div id="549651" class="CellBody">void setFetchDirection (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549653"> </a><div id="549653" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549655"> </a><div id="549655" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549657"> </a><div id="549657" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549659"> </a><div id="549659" class="CellBody">void setFetchSize (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549661"> </a><div id="549661" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549663"> </a><div id="549663" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549665"> </a><div id="549665" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549667"> </a><div id="549667" class="CellBody">void updateAsciiStream (String, InputStream, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549669"> </a><div id="549669" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549671"> </a><div id="549671" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549673"> </a><div id="549673" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549675"> </a><div id="549675" class="CellBody">void updateAsciiStream (int, InputStream, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549677"> </a><div id="549677" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549679"> </a><div id="549679" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549681"> </a><div id="549681" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549683"> </a><div id="549683" class="CellBody">void updateBigDecimal (int, BigDecimal) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549685"> </a><div id="549685" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549687"> </a><div id="549687" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549689"> </a><div id="549689" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549691"> </a><div id="549691" class="CellBody">void updateBigDecimal (String, BigDecimal) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549693"> </a><div id="549693" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549695"> </a><div id="549695" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549697"> </a><div id="549697" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549699"> </a><div id="549699" class="CellBody">void updateBinaryStream (String, InputStream, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549701"> </a><div id="549701" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549703"> </a><div id="549703" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549705"> </a><div id="549705" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549707"> </a><div id="549707" class="CellBody">void updateBinaryStream (int, InputStream, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549709"> </a><div id="549709" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549711"> </a><div id="549711" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549713"> </a><div id="549713" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549715"> </a><div id="549715" class="CellBody">void updateBoolean (int, boolean) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549717"> </a><div id="549717" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549719"> </a><div id="549719" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549721"> </a><div id="549721" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549723"> </a><div id="549723" class="CellBody">void updateBoolean (String, boolean) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549725"> </a><div id="549725" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549727"> </a><div id="549727" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549729"> </a><div id="549729" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549731"> </a><div id="549731" class="CellBody">void updateByte (String, byte) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549733"> </a><div id="549733" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549735"> </a><div id="549735" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549737"> </a><div id="549737" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549739"> </a><div id="549739" class="CellBody">void updateByte (int, byte) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549741"> </a><div id="549741" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549743"> </a><div id="549743" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549745"> </a><div id="549745" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549747"> </a><div id="549747" class="CellBody">void updateBytes (String, byte []) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549749"> </a><div id="549749" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549751"> </a><div id="549751" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549753"> </a><div id="549753" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549755"> </a><div id="549755" class="CellBody">void updateBytes (int, byte []) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549757"> </a><div id="549757" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549759"> </a><div id="549759" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549761"> </a><div id="549761" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549763"> </a><div id="549763" class="CellBody">void updateCharacterStream (String, Reader, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549765"> </a><div id="549765" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549767"> </a><div id="549767" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549769"> </a><div id="549769" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549771"> </a><div id="549771" class="CellBody">void updateCharacterStream (int, Reader, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549773"> </a><div id="549773" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549775"> </a><div id="549775" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549777"> </a><div id="549777" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549779"> </a><div id="549779" class="CellBody">void updateDate (int, Date) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549781"> </a><div id="549781" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549783"> </a><div id="549783" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549785"> </a><div id="549785" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549787"> </a><div id="549787" class="CellBody">void updateDate (String, Date) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549789"> </a><div id="549789" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549791"> </a><div id="549791" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549793"> </a><div id="549793" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549795"> </a><div id="549795" class="CellBody">void updateDouble (String, double) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549797"> </a><div id="549797" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549799"> </a><div id="549799" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549801"> </a><div id="549801" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549803"> </a><div id="549803" class="CellBody">void updateDouble (int, double) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549805"> </a><div id="549805" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549807"> </a><div id="549807" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549809"> </a><div id="549809" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549811"> </a><div id="549811" class="CellBody">void updateFloat (int, float) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549813"> </a><div id="549813" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549815"> </a><div id="549815" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549817"> </a><div id="549817" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549819"> </a><div id="549819" class="CellBody">void updateFloat (String, float) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549821"> </a><div id="549821" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549823"> </a><div id="549823" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549825"> </a><div id="549825" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549827"> </a><div id="549827" class="CellBody">void updateInt (int, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549829"> </a><div id="549829" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549831"> </a><div id="549831" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549833"> </a><div id="549833" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549835"> </a><div id="549835" class="CellBody">void updateInt (String, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549837"> </a><div id="549837" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549839"> </a><div id="549839" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549841"> </a><div id="549841" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549843"> </a><div id="549843" class="CellBody">void updateLong (String, long) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549845"> </a><div id="549845" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549847"> </a><div id="549847" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549849"> </a><div id="549849" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549851"> </a><div id="549851" class="CellBody">void updateLong (int, long) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549853"> </a><div id="549853" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549855"> </a><div id="549855" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549857"> </a><div id="549857" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549859"> </a><div id="549859" class="CellBody">void updateNull (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549861"> </a><div id="549861" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549863"> </a><div id="549863" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549865"> </a><div id="549865" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549867"> </a><div id="549867" class="CellBody">void updateNull (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549869"> </a><div id="549869" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549871"> </a><div id="549871" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549873"> </a><div id="549873" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549875"> </a><div id="549875" class="CellBody">void updateObject (String, Object) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549877"> </a><div id="549877" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549879"> </a><div id="549879" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549881"> </a><div id="549881" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549883"> </a><div id="549883" class="CellBody">void updateObject (int, Object) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549885"> </a><div id="549885" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549887"> </a><div id="549887" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549889"> </a><div id="549889" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549891"> </a><div id="549891" class="CellBody">void updateObject (String, Object, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549893"> </a><div id="549893" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549895"> </a><div id="549895" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549897"> </a><div id="549897" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549899"> </a><div id="549899" class="CellBody">void updateObject (int, Object, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549901"> </a><div id="549901" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549903"> </a><div id="549903" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549905"> </a><div id="549905" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549907"> </a><div id="549907" class="CellBody">void updateRow () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549909"> </a><div id="549909" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549911"> </a><div id="549911" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549913"> </a><div id="549913" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549915"> </a><div id="549915" class="CellBody">void updateShort (int, short) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549917"> </a><div id="549917" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549919"> </a><div id="549919" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549921"> </a><div id="549921" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549923"> </a><div id="549923" class="CellBody">void updateShort (String, short) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549925"> </a><div id="549925" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549927"> </a><div id="549927" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549929"> </a><div id="549929" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549931"> </a><div id="549931" class="CellBody">void updateString (String, String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549933"> </a><div id="549933" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549935"> </a><div id="549935" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549937"> </a><div id="549937" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549939"> </a><div id="549939" class="CellBody">void updateString (int, String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549941"> </a><div id="549941" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549943"> </a><div id="549943" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549945"> </a><div id="549945" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549947"> </a><div id="549947" class="CellBody">void updateTime (int, Time) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549949"> </a><div id="549949" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549951"> </a><div id="549951" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549953"> </a><div id="549953" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549955"> </a><div id="549955" class="CellBody">void updateTime (String, Time) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549957"> </a><div id="549957" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549959"> </a><div id="549959" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549961"> </a><div id="549961" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549963"> </a><div id="549963" class="CellBody">void updateTimestamp (String, Timestamp) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549965"> </a><div id="549965" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549967"> </a><div id="549967" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549969"> </a><div id="549969" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549971"> </a><div id="549971" class="CellBody">void updateTimestamp (int, Timestamp) </div></td>
+    <td bgcolor="#E6E6E6"><a name="549973"> </a><div id="549973" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="549975"> </a><div id="549975" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549977"> </a><div id="549977" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="549979"> </a><div id="549979" class="CellBody">boolean wasNull () </div></td>
+    <td bgcolor="#E6E6E6"><a name="549981"> </a><div id="549981" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="549983"> </a><div id="549983" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="549985"> </a><div id="549985" class="CellBody"> </div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p id="544034" class="Body">
+  <a name="544034"> </a>
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsupp10.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp12.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

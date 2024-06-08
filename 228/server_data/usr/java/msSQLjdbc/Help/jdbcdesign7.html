@@ -1,0 +1,191 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:34" />
+    <title>Updating Data</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="73681" class="NewHTMLPage">
+  <a name="73681"> </a>Updating Data
+</h2><hr />
+<p id="73682" class="Body">
+  <a name="73682"> </a>This section provides general guidelines to help you to optimize system performance when updating data in databases.
+</p>
+<h3 id="72658" class="Heading2">
+  <a name="72658"> </a>Using updateXXX Methods
+</h3>
+<p id="72659" class="Body">
+  <a name="72659"> </a>Although programmatic updates do not apply to all types of applications, developers should attempt to use programmatic updates and deletes. Using the updateXXX methods of the ResultSet object allows the developer to update data without building a complex SQL statement. Instead, the developer simply supplies the column in the result set that is to be updated and the data that is to be changed. Then, before moving the cursor from the row in the result set, the updateRow method must be called to update the database as well. 
+</p>
+<p id="72660" class="Body">
+  <a name="72660"> </a>In the following code fragment, the value of the Age column of the Resultset object rs is retrieved using the method getInt, and the method updateInt is used to update the column with an int value of 25. The method updateRow is called to update the row in the database that contains the modified value.
+</p>
+<pre  class="Preformatted">
+int n = rs.getInt(&quot;Age&quot;); <a name="72661"> </a>
+// n contains value of Age column in the resultset rs<a name="72662"> </a>
+. . .<a name="72663"> </a>
+rs.updateInt(&quot;Age&quot;, 25); <a name="72664"> </a>
+rs.updateRow();<a name="72665"> </a>
+</pre>
+<p id="72667" class="Body">
+  <a name="72667"> </a>In addition to making the application more easily maintainable, programmatic updates usually result in improved performance. Because the database server is already positioned on the row for the Select statement in process, performance-expensive operations to locate the row to be changed are not needed. If the row must be located, the server usually has an internal pointer to the row available (for example, ROWID). 
+</p>
+<h3 id="72668" class="Heading2">
+  <a name="72668"> </a>Using getBestRowIndentifier()
+</h3>
+<p id="72669" class="Body">
+  <a name="72669"> </a>Use getBestRowIndentifier() to determine the optimal set of columns to use in the Where clause for updating data. Pseudo-columns often provide the fastest access to the data, and these columns can only be determined by using getBestRowIndentifier().
+</p>
+<p id="72670" class="Body">
+  <a name="72670"> </a>Some applications cannot be designed to take advantage of positional updates and deletes. Some applications might formulate the Where clause by using all searchable result columns by calling getPrimaryKeys(), or by calling getIndexInfo() to find columns that might be part of a unique index. These methods usually work, but might result in fairly complex queries.
+</p>
+<p id="72671" class="Body">
+  <a name="72671"> </a>Consider the following example:
+</p>
+<pre  class="Preformatted">
+ResultSet WSrs = WSs.executeQuery <a name="72672"> </a>
+     (&quot;SELECT first_name, last_name, ssn, address, city, state, zip <a name="72673"> </a>
+        FROM emp&quot;);<a name="72674"> </a>
+// fetchdata<a name="72675"> </a>
+...<a name="72676"> </a>
+WSs.executeQuery (&quot;UPDATE EMP SET ADDRESS = ?<a name="72677"> </a>
+     WHERE first_name = ? and last_name = ? and ssn = ? <a name="72678"> </a>
+     and address = ? and city = ? and state = ? <a name="72679"> </a>
+     and zip = ?&quot;);<a name="72680"> </a>
+// fairly complex query<a name="72681"> </a>
+</pre>
+<p id="72682" class="Body">
+  <a name="72682"> </a>Applications should call getBestRowIndentifier() to retrieve the optimal set of columns (possibly a pseudo-column) that identifies a specific record. Many databases support special columns that are not explicitly defined by the user in the table definition but are &quot;hidden&quot; columns of every table (for example, ROWID and TID). These pseudo-columns generally provide the fastest access to the data because they typically are pointers to the exact location of the record. Because pseudo-columns are not part of the explicit table definition, they are not returned from getColumns. To determine if pseudo-columns exist, call getBestRowIndentifier().
+</p>
+<p id="72683" class="Body">
+  <a name="72683"> </a>Consider the previous example again:
+</p>
+<pre  class="Preformatted">
+...<a name="72684"> </a>
+ResultSet WSrowid = getBestRowIndentifier() <a name="72685"> </a>
+   (.... &quot;emp&quot;, ...);<a name="72686"> </a>
+...<a name="72687"> </a>
+WSs.executeQuery (&quot;UPDATE EMP SET ADDRESS = ?<a name="72688"> </a>
+     WHERE first_name = ? and last_name = ? and ssn = ? <a name="72689"> </a>
+     and address = ? and city = ? and state = ? <a name="72690"> </a>
+     and zip = ?&quot;);<a name="72691"> </a>
+// fastest access to the data!<a name="72692"> </a>
+</pre>
+<p id="72693" class="Body">
+  <a name="72693"> </a>If your data source does not contain special pseudo-columns, then the result set of getBestRowIndentifier() consists of the columns of the most optimal unique index on the specified table (if a unique index exists). Therefore, your application does not need to call getIndexInfo to find the smallest unique index.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcdesign6.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcdesign8.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

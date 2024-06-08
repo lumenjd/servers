@@ -1,0 +1,286 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:58" />
+    <title>jdbcsupp4.html</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="537160" class="NewHTMLPage">
+  <a name="537160"> </a>
+</h2><hr />
+<p id="537178" class="Body">
+  <a name="537178"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><h4 id="555406" class="Heading3">
+  <a name="555406"> </a>Connection Object  
+</h4>
+<a name="555407"> </a><div id="555407" class="CellHeading">Methods</div></th>
+    <th><a name="555409"> </a><div id="555409" class="CellHeading">Version</div><a name="555410"> </a><div id="555410" class="CellHeading">Introduced</div></th>
+    <th><a name="555412"> </a><div id="555412" class="CellHeading"><br /></div><a name="555413"> </a><div id="555413" class="CellHeading">Supported</div></th>
+    <th><a name="555415"> </a><div id="555415" class="CellHeading"><br /></div><a name="555416"> </a><div id="555416" class="CellHeading">Comments</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555418"> </a><div id="555418" class="CellBody">void close () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555420"> </a><div id="555420" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555422"> </a><div id="555422" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555424"> </a><div id="555424" class="CellBody">When a connection is closed while there is an active transaction, that transaction is rolled-back.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555426"> </a><div id="555426" class="CellBody">void commit () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555428"> </a><div id="555428" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555430"> </a><div id="555430" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555432"> </a><div id="555432" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555434"> </a><div id="555434" class="CellBody">Statement createStatement () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555436"> </a><div id="555436" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555438"> </a><div id="555438" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555440"> </a><div id="555440" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555442"> </a><div id="555442" class="CellBody">Statement createStatement (int, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555444"> </a><div id="555444" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="555446"> </a><div id="555446" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555448"> </a><div id="555448" class="CellBody">ResultSet.TYPE_SCROLL_SENSITIVE downgraded to TYPE_SCROLL_INSENSITIVE</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555451"> </a><div id="555451" class="CellBody">boolean getAutoCommit () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555453"> </a><div id="555453" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555455"> </a><div id="555455" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555457"> </a><div id="555457" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555459"> </a><div id="555459" class="CellBody">String getCatalog () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555461"> </a><div id="555461" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555463"> </a><div id="555463" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555466"> </a><div id="555466" class="CellBody">Support is driver-specific.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555468"> </a><div id="555468" class="CellBody">DatabaseMetaData getMetaData () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555470"> </a><div id="555470" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555472"> </a><div id="555472" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555474"> </a><div id="555474" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555476"> </a><div id="555476" class="CellBody">int getTransactionIsolation () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555478"> </a><div id="555478" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555480"> </a><div id="555480" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555482"> </a><div id="555482" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555484"> </a><div id="555484" class="CellBody">Map getTypeMap () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555486"> </a><div id="555486" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="555488"> </a><div id="555488" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555490"> </a><div id="555490" class="CellBody">Always returns empty java.util.HashMap.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555492"> </a><div id="555492" class="CellBody">SQLWarning getWarnings () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555494"> </a><div id="555494" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555496"> </a><div id="555496" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555498"> </a><div id="555498" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555500"> </a><div id="555500" class="CellBody">boolean isClosed () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555502"> </a><div id="555502" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555504"> </a><div id="555504" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555506"> </a><div id="555506" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555508"> </a><div id="555508" class="CellBody">boolean isReadOnly () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555510"> </a><div id="555510" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555512"> </a><div id="555512" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555514"> </a><div id="555514" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555516"> </a><div id="555516" class="CellBody">String nativeSQL (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555518"> </a><div id="555518" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555520"> </a><div id="555520" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555522"> </a><div id="555522" class="CellBody">Always returns same String as passed in. </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555524"> </a><div id="555524" class="CellBody">CallableStatement prepareCall (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555526"> </a><div id="555526" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555528"> </a><div id="555528" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555530"> </a><div id="555530" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555532"> </a><div id="555532" class="CellBody">CallableStatement prepareCall (String, int, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555534"> </a><div id="555534" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="555536"> </a><div id="555536" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555538"> </a><div id="555538" class="CellBody">ResultSet.TYPE_SCROLL_SENSITIVE downgraded to TYPE_SCROLL_INSENSITIVE</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555541"> </a><div id="555541" class="CellBody">PreparedStatement prepareStatement (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555543"> </a><div id="555543" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555545"> </a><div id="555545" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555547"> </a><div id="555547" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555549"> </a><div id="555549" class="CellBody">PreparedStatement prepareStatement (String, int, int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555551"> </a><div id="555551" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="555553"> </a><div id="555553" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555555"> </a><div id="555555" class="CellBody">ResultSet.TYPE_SCROLL_SENSITIVE downgraded to TYPE_SCROLL_INSENSITIVE</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555558"> </a><div id="555558" class="CellBody">void rollback () </div></td>
+    <td bgcolor="#E6E6E6"><a name="555560"> </a><div id="555560" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555562"> </a><div id="555562" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555564"> </a><div id="555564" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555566"> </a><div id="555566" class="CellBody">void setAutoCommit (boolean) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555568"> </a><div id="555568" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555570"> </a><div id="555570" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555572"> </a><div id="555572" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555574"> </a><div id="555574" class="CellBody">void setCatalog (String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555576"> </a><div id="555576" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555578"> </a><div id="555578" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555581"> </a><div id="555581" class="CellBody">Support is driver-specific.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555583"> </a><div id="555583" class="CellBody">void setReadOnly (boolean) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555585"> </a><div id="555585" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555587"> </a><div id="555587" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555589"> </a><div id="555589" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555591"> </a><div id="555591" class="CellBody">void setTransactionIsolation (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555593"> </a><div id="555593" class="CellBody">1.0 </div></td>
+    <td bgcolor="#E6E6E6"><a name="555595"> </a><div id="555595" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="555597"> </a><div id="555597" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="555599"> </a><div id="555599" class="CellBody">void setTypeMap (Map) </div></td>
+    <td bgcolor="#E6E6E6"><a name="555601"> </a><div id="555601" class="CellBody">2.0 Core </div></td>
+    <td bgcolor="#E6E6E6"><a name="555604"> </a><div id="555604" class="CellBody">Yes<span style="color: #000000;  font-style: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline"> </span></div></td>
+    <td bgcolor="#E6E6E6"><a name="555606"> </a><div id="555606" class="CellBody">Ignored.</div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p id="537179" class="Body">
+  <a name="537179"> </a>
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsupp3.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp5.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

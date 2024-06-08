@@ -1,0 +1,184 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:58" />
+    <title>jdbcsupp5.html</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="544753" class="NewHTMLPage">
+  <a name="544753"> </a>
+</h2><hr />
+<p id="538609" class="Body">
+  <a name="538609"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><h4 id="547533" class="Heading3">
+  <a name="547533"> </a>ConnectionPoolData<br />Source Object  
+</h4>
+<a name="538585"> </a><div id="538585" class="CellHeading">Methods</div></th>
+    <th><a name="538589"> </a><div id="538589" class="CellHeading"><br /></div><a name="552849"> </a><div id="552849" class="CellHeading">Version</div><a name="538590"> </a><div id="538590" class="CellHeading">Introduced</div></th>
+    <th><a name="544978"> </a><div id="544978" class="CellHeading"><br /></div><a name="538594"> </a><div id="538594" class="CellHeading"><br /></div><a name="538595"> </a><div id="538595" class="CellHeading">Supported</div></th>
+    <th><a name="544974"> </a><div id="544974" class="CellHeading"><br /></div><a name="544975"> </a><div id="544975" class="CellHeading"><br /></div><a name="538600"> </a><div id="538600" class="CellHeading">Comments</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538615"> </a><div id="538615" class="CellBody">PrintWriter getLogWriter () </div></td>
+    <td bgcolor="#E6E6E6"><a name="538617"> </a><div id="538617" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538619"> </a><div id="538619" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="538621"> </a><div id="538621" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538623"> </a><div id="538623" class="CellBody">int getLoginTimeout () </div></td>
+    <td bgcolor="#E6E6E6"><a name="538625"> </a><div id="538625" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538627"> </a><div id="538627" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="538629"> </a><div id="538629" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538631"> </a><div id="538631" class="CellBody">PooledConnection getPooledConnection () </div></td>
+    <td bgcolor="#E6E6E6"><a name="538633"> </a><div id="538633" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538635"> </a><div id="538635" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="538637"> </a><div id="538637" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538639"> </a><div id="538639" class="CellBody">PooledConnection getPooledConnection (String, String) </div></td>
+    <td bgcolor="#E6E6E6"><a name="538641"> </a><div id="538641" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538643"> </a><div id="538643" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="538645"> </a><div id="538645" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538647"> </a><div id="538647" class="CellBody">void setLogWriter (PrintWriter) </div></td>
+    <td bgcolor="#E6E6E6"><a name="538649"> </a><div id="538649" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538651"> </a><div id="538651" class="CellBody">No </div></td>
+    <td bgcolor="#E6E6E6"><a name="538653"> </a><div id="538653" class="CellBody"> </div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="538655"> </a><div id="538655" class="CellBody">void setLoginTimeout (int) </div></td>
+    <td bgcolor="#E6E6E6"><a name="538657"> </a><div id="538657" class="CellBody">2.0 Optional</div></td>
+    <td bgcolor="#E6E6E6"><a name="538659"> </a><div id="538659" class="CellBody">Yes </div></td>
+    <td bgcolor="#E6E6E6"><a name="538661"> </a><div id="538661" class="CellBody"> </div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p id="540538" class="Body">
+  <a name="540538"> </a>
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsupp4.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp6.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

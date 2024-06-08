@@ -1,0 +1,166 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:39" />
+    <title>Scalar Functions</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="17303" class="NewHTMLPage">
+  <a name="17303"> </a>Scalar Functions
+</h2><hr />
+<p id="17304" class="Body">
+  <a name="17304"> </a>You can use scalar functions in SQL statements with the following syntax:
+</p>
+<pre  class="Preformatted">
+{fn <code><em>scalar-function</em></code>}<a name="17305"> </a>
+</pre>
+<p id="17306" class="Body">
+  <a name="17306"> </a>where <em>scalar-function</em> is a scalar function supported by the Microsoft SQL Server 2000 Driver for JDBC, as listed in <a href="scalarfn3.html#23030">Table D-1</a>.
+</p>
+<h5 id="17310" class="Heading4">
+  <a name="17310"> </a>Example:
+</h5>
+<pre  class="Preformatted">
+SELECT {fn UCASE(NAME)} FROM EMP<a name="17311"> </a>
+</pre>
+<p id="17377" class="Body">
+  <a name="17377"> </a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption><a name="23030"> </a><div id="23030" class="TableTitle">Table D-1.  Scalar Functions Supported </div></caption>
+  <tr bgcolor="#FFFFFF" valign="bottom">
+    <th><a name="23040"> </a><div id="23040" class="CellHeading">Data Store</div></th>
+    <th><a name="23042"> </a><div id="23042" class="CellHeading">String <br />Functions</div></th>
+    <th><a name="23044"> </a><div id="23044" class="CellHeading">Numeric Functions</div></th>
+    <th><a name="23046"> </a><div id="23046" class="CellHeading">Timedate<br />Functions</div></th>
+    <th><a name="23048"> </a><div id="23048" class="CellHeading">System<br />Functions</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="23085"> </a><div id="23085" class="CellBody">SQL Server 2000</div></td>
+    <td bgcolor="#E6E6E6"><a name="23087"> </a><div id="23087" class="CellBody">ASCII<br />CHAR<br />CONCAT<br />DIFFERENCE<br />INSERT<br />LCASE<br />LEFT<br />LENGTH<br />LOCATE<br />LTRIM<br />REPEAT<br />REPLACE<br />RIGHT<br />RTRIM<br />SOUNDEX<br />SPACE<br />SUBSTRING<br />UCASE</div></td>
+    <td bgcolor="#E6E6E6"><a name="23089"> </a><div id="23089" class="CellBody">ABS<br />ACOS<br />ASIN<br />ATAN<br />ATAN2<br />CEILING<br />COS<br />COT<br />DEGREES<br />EXP<br />FLOOR<br />LOG<br />LOG10<br />MOD<br />PI<br />POWER<br />RADIANS<br />RAND<br />ROUND<br />SIGN<br />SIN<br />SQRT<br />TAN<br />TRUNCATE</div></td>
+    <td bgcolor="#E6E6E6"><a name="23091"> </a><div id="23091" class="CellBody">DAYNAME<br />DAYOFMONTH<br />DAYOFWEEK<br />DAYOFYEAR<br />EXTRACT<br />HOUR<br />MINUTE<br />MONTH<br />MONTHNAME<br />NOW<br />QUARTER<br />SECOND<br />TIMESTAMPADD<br />TIMESTAMPDIFF<br />WEEK<br />YEAR</div></td>
+    <td bgcolor="#E6E6E6"><a name="23093"> </a><div id="23093" class="CellBody">DBNAME<br />IFNULL<br />USERNAME</div></td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<p></p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="scalarfn2.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="scalarfn4.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

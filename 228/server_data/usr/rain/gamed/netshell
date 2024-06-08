@@ -1,0 +1,5 @@
+#!/bin/sh
+
+date > last_restart.log
+/home/game/game/restart &
+

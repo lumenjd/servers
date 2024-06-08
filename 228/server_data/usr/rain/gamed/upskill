@@ -1,0 +1,3 @@
+rm libskill.so
+scp baiwei@172.16.2.116:zskill/skill/libskill.so .
+

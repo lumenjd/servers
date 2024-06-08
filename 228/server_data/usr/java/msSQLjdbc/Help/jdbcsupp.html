@@ -1,0 +1,191 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:39:58" />
+    <title>A JDBC Support</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="524304" class="NewHTMLPageApp2">
+  <a name="524304"> </a>JDBC Support
+</h2><hr />
+<p id="555386" class="Body">
+  <a name="555386"> </a><a href="jdbcsupp.html#546152">Table A-1</a> shows compatibility between the JDBC application versions, Java Virtual Machines, and the SQL Server 2000 Driver for JDBC.
+</p>
+<p id="546232" class="Body">
+  <a name="546232"> </a><span style="color: #000000;  font-style: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline">
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption><a name="546152"> </a><div id="546152" class="TableTitle">Table A-1.  JDBC Compatibility  </div></caption>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546160"> </a><div id="546160" class="CellHeading">JDBC Version Used*</div></td>
+    <td bgcolor="#E6E6E6"><a name="546162"> </a><div id="546162" class="CellHeading">JRE/JDK</div></td>
+    <td bgcolor="#E6E6E6"><a name="546164"> </a><div id="546164" class="CellHeading">Compatible?</div></td>
+    <td bgcolor="#E6E6E6"><a name="546166"> </a><div id="546166" class="CellHeading">Comments</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546168"> </a><div id="546168" class="CellBody">1.22</div></td>
+    <td bgcolor="#E6E6E6"><a name="546170"> </a><div id="546170" class="CellBody">1.0.2</div></td>
+    <td bgcolor="#E6E6E6"><a name="546172"> </a><div id="546172" class="CellBody">No</div></td>
+    <td bgcolor="#E6E6E6"><a name="546174"> </a><div id="546174" class="CellBody">The SQL Server 2000 Driver for JDBC does not support Java Virtual Machine 1.0.2.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546176"> </a><div id="546176" class="CellBody">1.22</div></td>
+    <td bgcolor="#E6E6E6"><a name="546178"> </a><div id="546178" class="CellBody">1.1.8</div></td>
+    <td bgcolor="#E6E6E6"><a name="546180"> </a><div id="546180" class="CellBody">Yes</div></td>
+    <td bgcolor="#E6E6E6"><a name="546182"> </a><div id="546182" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546184"> </a><div id="546184" class="CellBody">1.22</div></td>
+    <td bgcolor="#E6E6E6"><a name="546186"> </a><div id="546186" class="CellBody">1.2</div></td>
+    <td bgcolor="#E6E6E6"><a name="546188"> </a><div id="546188" class="CellBody">Yes</div></td>
+    <td bgcolor="#E6E6E6"><a name="546190"> </a><div id="546190" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546192"> </a><div id="546192" class="CellBody">2.0</div></td>
+    <td bgcolor="#E6E6E6"><a name="546194"> </a><div id="546194" class="CellBody">1.0.2</div></td>
+    <td bgcolor="#E6E6E6"><a name="546196"> </a><div id="546196" class="CellBody">No</div></td>
+    <td bgcolor="#E6E6E6"><a name="546198"> </a><div id="546198" class="CellBody">The SQL Server 2000 Driver for JDBC does not support Java Virtual Machine 1.0.2.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546200"> </a><div id="546200" class="CellBody">2.0</div></td>
+    <td bgcolor="#E6E6E6"><a name="546202"> </a><div id="546202" class="CellBody">1.1.x</div></td>
+    <td bgcolor="#E6E6E6"><a name="546204"> </a><div id="546204" class="CellBody">No</div></td>
+    <td bgcolor="#E6E6E6"><a name="546206"> </a><div id="546206" class="CellBody">A JDBC 2.0 application requires the JDBC 2.0 classes.</div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546208"> </a><div id="546208" class="CellBody">2.0</div></td>
+    <td bgcolor="#E6E6E6"><a name="546210"> </a><div id="546210" class="CellBody">1.2</div></td>
+    <td bgcolor="#E6E6E6"><a name="546212"> </a><div id="546212" class="CellBody">Yes</div></td>
+    <td bgcolor="#E6E6E6"><a name="546214"> </a><div id="546214" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#E6E6E6"><a name="546216"> </a><div id="546216" class="CellBody">2.0</div></td>
+    <td bgcolor="#E6E6E6"><a name="546218"> </a><div id="546218" class="CellBody">1.3</div></td>
+    <td bgcolor="#E6E6E6"><a name="546220"> </a><div id="546220" class="CellBody">Yes<br /></div></td>
+    <td bgcolor="#E6E6E6"><a name="546222"> </a><div id="546222" class="CellBody"><br /></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#C0C0C0" colspan="4" rowspan="1"><a name="546224"> </a><div id="546224" class="CellBody">*Refers to whether the application is using JDBC 1.22 or JDBC 2.0 features.</div></td>
+  </tr>
+</table>
+
+
+
+</span>
+</p>
+<p></p>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="jdbcsqlsrv9.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="jdbcsupp2.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>

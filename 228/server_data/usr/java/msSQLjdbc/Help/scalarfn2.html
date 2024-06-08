@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 6.0.7" />
+    <meta name="TEMPLATEBASE" content="DataDirect WWH 2.0" />
+    <meta name="LASTUPDATED" content="09/05/02 10:40:39" />
+    <title>Date, Time, and Timestamp Escape Sequences</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      function  WWHUpdateFavorite(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fUpdateFavorite(ParamHREF);
+        }
+      }
+
+      function  WWHSyncTOC(ParamHREF)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fSyncTOC(ParamHREF);
+        }
+      }
+
+      function  WWHShowPopup(ParamContext,
+                             ParamLink,
+                             ParamEvent)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fShowPopup(ParamContext, ParamLink, ParamEvent);
+        }
+      }
+
+      function  WWHHidePopup()
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          parent.WWHelpFrameSet.fHidePopup();
+        }
+      }
+
+      function  WWHClickedPopup(ParamContext,
+                                ParamLink)
+      {
+        if ((parent != null) &&
+            (parent.WWHelpFrameSet != null))
+        {
+          location.href = parent.WWHelpFrameSet.fClickedPopup(ParamContext, ParamLink);
+        }
+      }
+     // -->
+    </script>
+
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      var  WWHelpHREF = location.href;
+
+
+      WWHUpdateFavorite(WWHelpHREF);
+     // -->
+    </script>
+
+    <blockquote>
+<h2 id="17272" class="NewHTMLPage">
+  <a name="17272"> </a>Date, Time, and Timestamp Escape Sequences
+</h2><hr />
+<p id="17273" class="Body">
+  <a name="17273"> </a>The escape sequence for date, time, and timestamp literals is:
+</p>
+<pre  class="Preformatted">
+{<code><em>literal-type</em></code> &#39;value&#39;}<a name="17274"> </a>
+</pre>
+<p id="17300" class="Body">
+  <a name="17300"> </a>where <em>literal-type</em> is one of the following:
+</p>
+<p id="21927" class="Body">
+  <a name="21927"> </a>
+
+<table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#FFFFEE" valign="top">
+    <th><a name="17277"> </a><div id="17277" class="CellHeading">literal-type</div></th>
+    <th><a name="17279"> </a><div id="17279" class="CellHeading">Description</div></th>
+    <th><a name="17281"> </a><div id="17281" class="CellHeading">Value Format</div></th>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="17283"> </a><div id="17283" class="CellBody">d</div></td>
+    <td bgcolor="#FFFFEE"><a name="17285"> </a><div id="17285" class="CellBody">Date</div></td>
+    <td bgcolor="#FFFFEE"><a name="17287"> </a><div id="17287" class="CellBody"><code>yyyy-mm-dd</code></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="17289"> </a><div id="17289" class="CellBody">t</div></td>
+    <td bgcolor="#FFFFEE"><a name="17291"> </a><div id="17291" class="CellBody">Time</div></td>
+    <td bgcolor="#FFFFEE"><a name="17293"> </a><div id="17293" class="CellBody"><code>hh:mm:ss [1]</code></div></td>
+  </tr>
+  <tr valign="top">
+    <td bgcolor="#FFFFEE"><a name="17295"> </a><div id="17295" class="CellBody">ts</div></td>
+    <td bgcolor="#FFFFEE"><a name="17297"> </a><div id="17297" class="CellBody">Timestamp</div></td>
+    <td bgcolor="#FFFFEE"><a name="17299"> </a><div id="17299" class="CellBody"><code>yyyy-mm-dd hh:mm:ss[.f...]</code></div></td>
+  </tr>
+</table>
+
+
+
+	
+</p>
+<h5 id="17301" class="Heading4">
+  <a name="17301"> </a>Example: 
+</h5>
+<pre  class="Preformatted">
+UPDATE Orders SET OpenDate={d &#39;1995-01-15&#39;} 
+WHERE OrderID=1023<a name="17302"> </a>
+</pre>
+    </blockquote>
+
+    <hr />
+
+    <table border="0">
+      <tr>
+        <td width="23">
+<a href="scalarfn.html">
+      <img alt="Previous Document" border="0" src="images/prev.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Previous Page       
+        </td>
+        <td width="23">
+<a href="scalarfn3.html">
+      <img alt="Next Document" border="0" src="images/next.gif" width="23" height="21" />
+    </a>
+        </td>
+        <td width="23" class="CellBody">
+        Next Page       
+        </td>
+        <td width="23">
+          <a href="javascript:WWHSyncTOC(WWHelpHREF);">
+            <img alt="Synchronize TOC" border="0" src="images/sync.gif" width="23" height="21" />
+          </a>
+        </td>
+        <td width="120" class="CellBody">
+        Synchronize with Contents
+        </td>
+      </tr>
+    </table>
+
+   <div id="WWHelpPopupDIV" style="position: absolute ; z-index: 1 ; visibility: hidden ; top: 0px ; left: 0px">
+    <script type="text/javascript" language="JavaScript">
+     <!--
+      if ((parent != null) &&
+          (parent.WWHelpFrameSet != null))
+      {
+        if (document.all != null)  // Non-Netscape browser
+        {
+          document.writeln(parent.WWHelpFrameSet.mPopup.fFormat("Popup"));
+        }
+      }
+     // -->
+    </script>
+   </div>
+  </body>
+</html>
