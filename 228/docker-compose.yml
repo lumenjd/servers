@@ -17,8 +17,10 @@ services:
       - 11101:11101
     volumes:
       - ./server_data:/data
-    command: bash -c "sh /data/root/c"
-    container_name: server
+    command: bash -c "sleep 5 & sh /data/root/base"
+    networks:
+      custom_network:
+        ipv4_address: 192.168.100.2
     extra_hosts:
       - "wmserver:127.0.0.1"
       - "aumanager:127.0.0.1"
@@ -33,9 +35,21 @@ services:
       - "database:127.0.0.1"
       - "backup:127.0.0.1"
 
+  gs15:
+    image: server
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./server_data:/data
+    command: bash -c "sh /data/root/gs 15"
+    networks:
+      custom_network:
+        ipv4_address: 192.168.100.115
+
   db-mariadb:
     image: i386/mariadb:5.5.61
-    container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
@@ -47,10 +61,12 @@ services:
       - .env
     profiles:
       - i386
+    networks:
+      custom_network:
+        ipv4_address: 192.168.100.3
 
   db-mysql:
     image: mysql:5.5
-    container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
@@ -62,3 +78,13 @@ services:
       - .env
     profiles:
       - x86_64
+    networks:
+      custom_network:
+        ipv4_address: 192.168.100.4
+
+networks:
+  custom_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24

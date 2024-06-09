@@ -4,7 +4,7 @@
 <application debug="false" >
 
 <driver name="com.mysql.jdbc.Driver" />
-<connection name="auth0" poolsize="3" url="jdbc:mysql://db/zx?useUnicode=true&amp;characterEncoding=utf8" username="root" password="your_secure_password"/>
+<connection name="auth0" poolsize="3" url="jdbc:mysql://192.168.100.4/zx?useUnicode=true&amp;characterEncoding=utf8" username="root" password="your_secure_password"/>
 
 <table name="users" connection="auth0" operate="replaceA"> 
 	<column name="id"           sql-type="integer"     java-type="java.lang.Integer" not-null="true" />

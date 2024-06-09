@@ -32,10 +32,6 @@ cd /data/usr/rain/uniquenamed
 echo "f"
 sleep 1
 
-cd /data/usr/rain/gamed
-./gs gs.conf gmserver.conf gsalias.conf  & 
-sleep 1
-
 echo "Done booting!"
 echo "=========================================="
 

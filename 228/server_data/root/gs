@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Check if an argument is provided
+if [ -z "$1" ]; then
+  echo "Usage: $0 <alias_number>"
+  exit 1
+fi
+
+# Assign the argument to a variable
+ALIAS_NUMBER=$1
+
+# Construct the gsalias configuration filename
+if [ "$ALIAS_NUMBER" -eq 1 ]; then
+  GSALIAS_FILE="gsalias.conf"
+else
+  GSALIAS_FILE="gsalias${ALIAS_NUMBER}.conf"
+fi
+
+# Change to the appropriate directory and run the command
+cd /data/usr/rain/gamed
+./gs gs.conf gmserver.conf "$GSALIAS_FILE"
